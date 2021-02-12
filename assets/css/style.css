@@ -17,17 +17,12 @@ h2,
 h3,
 h4 {
     font-family: 'Anton', sans-serif;
-    letter-spacing: 1.5px;
+    letter-spacing: 1px;
 }
 
-.row {
-    margin: 0;
+.container-fluid {
     padding: 0;
-}
-
-.col {
     margin: 0;
-    padding: 0;
 }
 
 /* background-colors  */
@@ -39,7 +34,8 @@ h4 {
 /* nav bar  */
 
 .navbar {
-    background-color: none;
+    position: absolute;
+    top: 0;
 }
 
 .navbar-dark .navbar-nav .nav-link:hover {
@@ -57,40 +53,50 @@ h4 {
     border-radius: 15px;
 }
 
+@media screen and (max-width: 768px) {
+    li.nav-item {
+        background-color: rgb(0, 48, 43);
+        z-index: 2;
+    }
+}
+
+
+
 /* hero section  */
 
 .hero-container {
-    height: 700px;
-    background: linear-gradient(rgba(3, 71, 66, 0.2),rgba(1, 41, 38, 1)), url(../images/lineout-tinyjpg.jpg) top center no-repeat;
+    height: 90vh;
+    width: 100%;
+    background: linear-gradient(rgba(0, 48, 43, 0.2),rgb(0, 48, 43)), url(../images/lineout-tinyjpg.jpg) top center no-repeat;
     background-size: cover;
+    display: flex;
+    align-items: center;
 }
 
 .hero-callout {
-    margin-top: 15%;
+    color: #f9f9f9;
+    text-align: right;  
+    padding: 0;
 }
 
 .hero-callout h1 {
-    color: #f9f9f9;
-    font-size: 5em;
-    text-align: right;
-    margin-left: 15%;
-    margin-right: 5%;
+    font-size: 3.25em;
 }
 .hero-callout h2 {
-    color: #f9f9f9;
-    font-size: 3.5em;
-    text-align: right;
-    margin-left: 25%;
-    margin-right: 5%;
+    font-size: 2em;
 }
 
-@media screen and (max-width: 768px) {
-    .hero-callout {
-        font-size: 2em;
-        text-align: left;
+@media screen and (min-width: 768px) {
+    .hero-callout h1 {
+        font-size: 5em;
     }
+    .hero-callout h2 {
+        font-size: 3.5em;
+    }
+}
+
+@media screen and (max-width: 450px) {
     .hero-container {
         background-position: calc(50% - 50px) 50%;
     }
-
 }
