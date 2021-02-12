@@ -138,10 +138,24 @@ h4 {
     opacity: 1;
 }
 
-.opacity {
+.country-btn-active {
     opacity: 1;
+    box-shadow: 0px 0px 10px 10px rgba(249,249,249,0.5);
+    transition: 0s;
 }
 
 .country-btn:focus {
    outline: none;
+}
+
+@media screen and (max-width: 450px) {
+    .country-btn {
+    font-size: 15px;
+    }
+}
+
+/* country information  */
+
+.eng-table td {
+    vertical-align: top;
 }
