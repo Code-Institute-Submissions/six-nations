@@ -30,6 +30,41 @@ h4 {
     background-color: #000;
 }
 
+/* buttons */
+
+.small-btn {
+    background: rgb(249,249,249);
+    background: linear-gradient(150deg, rgba(249,249,249,1) 28%, rgba(65,64,66,1) 100%);
+    border: none;
+    border-radius: 15px;
+    display: block;
+    height: 45px;
+    width: 33%;
+    margin: 10px auto;
+    padding: 0px 10px;
+    font-weight: 800;
+    font-size: 100%;
+    
+}
+
+.btn-active {
+    color: rgba(0, 48, 43, 0.5);
+}
+
+.small-btn a {
+    font-weight: 800;
+    font-size: 100%;
+    color: #00302b;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+    .small-btn {
+    display: inline;
+    margin: 10px;
+    }
+}
+
 /* nav bar  */
 
 .navbar {
@@ -132,16 +167,13 @@ h4 {
     border-radius: 20px;
     opacity: 0;
     transition: 0.3s linear;
-}
 
-.flag:hover {
-    opacity: 1;
 }
 
 .country-btn-active {
     opacity: 1;
     box-shadow: 0px 0px 10px 10px rgba(249,249,249,0.5);
-    transition: 0s;
+    transition: 0.1s;
 }
 
 .country-btn:focus {
@@ -175,42 +207,12 @@ tr th:nth-child(2) {
     padding-left: 15px;
 }
 
-.small-btn {
-    background: rgb(249,249,249);
-    background: linear-gradient(150deg, rgba(249,249,249,1) 28%, rgba(65,64,66,1) 100%);
-    border: none;
-    border-radius: 15px;
-    display: block;
-    padding: 0px 15px;
-    height: 45px;
-    margin: 10px auto;
-    font-weight: 800;
-    font-size: 100%;
-    color: #00302b;
-}
-
-.small-btn a {
-    font-weight: 800;
-    font-size: 100%;
-    color: #00302b;
-}
-
-@media screen and (min-width: 768px) {
-    .small-btn {
-    display: inline;
-    margin: 10px;
-    }
-}
-
-/* flights popup */
+/* skyscanner widget */
 
 .flights-popup {
-    /* width: 50%; */
-    /* position: fixed; */
     display: block;
     left: 25%;
     top: 10%;
-    /* background-color: black; */
 }
 
 .skyscanner-widget {
