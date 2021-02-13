@@ -131,7 +131,7 @@ h4 {
     left: 0;
     border-radius: 20px;
     opacity: 0;
-    transition: 0.3s ease-in;
+    transition: 0.3s linear;
 }
 
 .flag:hover {
@@ -156,6 +156,28 @@ h4 {
 
 /* country information  */
 
+.england {
+    margin-left: 30px;
+}
+
 .eng-table td {
     vertical-align: top;
 }
+
+.small-btn {
+    Width: 75%;
+    height: 30px;
+    background: rgb(249,249,249);
+    background: linear-gradient(150deg, rgba(249,249,249,1) 28%, rgba(65,64,66,1) 100%);
+    border: none;
+    border-radius: 15px;
+    margin-left: 10%;
+}
+
+.small-btn a {
+    width: 75%;
+    font-weight: 800;
+    font-size: 20px;
+    color: #00302b;
+}
+
