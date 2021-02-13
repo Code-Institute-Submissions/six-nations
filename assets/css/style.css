@@ -155,29 +155,68 @@ h4 {
 }
 
 /* country information  */
+.information-container {
+    color: #f9f9f9;
+}
 
 .england {
-    margin-left: 30px;
+    margin: 30px;
 }
 
 .eng-table td {
     vertical-align: top;
 }
 
+tr td:nth-child(2) {
+    padding-left: 15px;
+}
+
+tr th:nth-child(2) {
+    padding-left: 15px;
+}
+
 .small-btn {
-    Width: 75%;
-    height: 30px;
     background: rgb(249,249,249);
     background: linear-gradient(150deg, rgba(249,249,249,1) 28%, rgba(65,64,66,1) 100%);
     border: none;
     border-radius: 15px;
-    margin-left: 10%;
+    display: block;
+    padding: 0px 15px;
+    height: 45px;
+    margin: 10px auto;
+    font-weight: 800;
+    font-size: 100%;
+    color: #00302b;
 }
 
 .small-btn a {
-    width: 75%;
     font-weight: 800;
-    font-size: 20px;
+    font-size: 100%;
     color: #00302b;
+}
+
+@media screen and (min-width: 768px) {
+    .small-btn {
+    display: inline;
+    margin: 10px;
+    }
+}
+
+/* flights popup */
+
+.flights-popup {
+    /* width: 50%; */
+    /* position: fixed; */
+    display: block;
+    left: 25%;
+    top: 10%;
+    /* background-color: black; */
+}
+
+.skyscanner-widget {
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 10px;
 }
 

@@ -76,20 +76,24 @@
     <!------------------ map/info section ------------------>
     <!------- England ------->
 
-    <div class="information-container" style="color:white;">
-        <div class="row">
+    <div class="information-container">
+        <div class="row no-gutters">
             <div class="col text-center">
                 <h1>Click on the country you are visiting</h1>
             </div>
         </div>
-        <div class="row no-gutters">
-            <div class="col-12 col-md-6">
-                <div class="england">
-                    <h1>England - London</h1>
+        <div class="row no-gutters england">
+            <div class="col-12 col-lg-6">
+                <div class="eng-information">
+                    <h1> England</h1>
                     <table class="eng-table">
                         <tr>
-                            <th>Stadium:</th>
-                            <th>Twickenham Stadium</th>
+                            <th>City:</th>
+                            <th>London</th>
+                        </tr>
+                        <tr>
+                            <td>Stadium:</td>
+                            <td>Twickenham Stadium</td>
                         </tr>
                         <tr>
                             <td>Capacity:</td>
@@ -107,16 +111,14 @@
                         </tr>
                     </table>
                     <div class="row no-gutters">
-                        <div class="col-6">
-                            <div class="small-btn text-center">
+                        <div class="col">
+                            <button class="btn-primary small-btn">
                                 <a href="https://www.eticketing.co.uk/rfu/Events/Index" target="_blank">Matchday
                                     Tickets</a>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="small-btn text-center">
-                                <a href="#">Book Flights</a>
-                            </div>
+                            </button>
+                            <button class="btn-primary small-btn">
+                               <a href="#flights-booking">Book Flight</a> 
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -125,14 +127,18 @@
                 <h3>This is where the map will go</h3>
             </div>
         </div>
-        <div class="row no-gutters">
+        <!-- <div class="row no-gutters">
             <div class="col-12 col-md-6 england">
                 <h1>Scotland - Edinburgh</h1>
                 <div class="eng-table">
                     <table>
                         <tr>
-                            <th>Stadium:</th>
-                            <th>Twickenham Stadium</th>
+                            <th>City:</th>
+                            <th>London</th>
+                        </tr>
+                        <tr>
+                            <td>Stadium:</td>
+                            <td>Twickenham Stadium</td>
                         </tr>
                         <tr>
                             <td>Capacity:</td>
@@ -279,9 +285,17 @@
             <div class="col-12 col-md-6">
                 <h3>This is where the map will go</h3>
             </div>
-        </div>
+        </div> -->
     </div>
+    <!------------------ Flight pop-up ------------------>
 
+    <div id="flights-booking">
+        <div class="skyscanner-widget" data-skyscanner-widget="FlightSearchWidget" data-locale="en-GB" data-market="GB" data-currency="GBP"
+            data-multi-city-max-flights-number="0" data-colour=" #f9f9f9" data-font-colour=" #00302b"
+            data-button-colour=" #00302b" data-button-font-colour="#f9f9f9">
+        </div>
+        <script src="https://widgets.skyscanner.net/widget-server/js/loader.js" async></script>
+    </div>
 
 
 
