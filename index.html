@@ -46,28 +46,28 @@
     <!------------------ country buttons ------------------>
     <div class="countries">
         <div class="row text-center">
-            <div class="col-4 col-md-2 country-btn-container btn">
-                <button class="country-btn" id="england"><img src="assets/images/england-flag.png" alt="England Flag"
+            <div class="col-4 col-md-2 country-btn-container">
+                <button class="country-btn btn-hover"><img src="assets/images/england-flag.png" alt="England Flag"
                         class="flag">England</button>
             </div>
-            <div class="col-4 col-md-2 country-btn-container btn">
-                <button class="country-btn"><img src="assets/images/scotland-flag.png" alt="England Flag"
+            <div class="col-4 col-md-2 country-btn-container">
+                <button class="country-btn btn-hover"><img src="assets/images/scotland-flag.png" alt="England Flag"
                         class="flag">Scotland</button>
             </div>
-            <div class="col-4 col-md-2 country-btn-container btn">
-                <button class="country-btn"><img src="assets/images/wales-flag-large.png" alt="England Flag"
+            <div class="col-4 col-md-2 country-btn-container">
+                <button class="country-btn btn-hover"><img src="assets/images/wales-flag-large.png" alt="England Flag"
                         class="flag">Wales</button>
             </div>
-            <div class="col-4 col-md-2 country-btn-container btn">
-                <button class="country-btn"><img src="assets/images/ireland-flag.png" alt="England Flag"
+            <div class="col-4 col-md-2 country-btn-container">
+                <button class="country-btn btn-hover"><img src="assets/images/ireland-flag.png" alt="England Flag"
                         class="flag">Ireland</button>
             </div>
-            <div class="col-4 col-md-2 country-btn-container btn">
-                <button class="country-btn"><img src="assets/images/france-flag-xl.png" alt="England Flag"
+            <div class="col-4 col-md-2 country-btn-container">
+                <button class="country-btn btn-hover"><img src="assets/images/france-flag-xl.png" alt="England Flag"
                         class="flag">France</button>
             </div>
-            <div class="col-4 col-md-2 country-btn-container btn">
-                <button class="country-btn"><img src="assets/images/italy-flag-large.png" alt="England Flag"
+            <div class="col-4 col-md-2 country-btn-container">
+                <button class="country-btn btn-hover"><img src="assets/images/italy-flag-large.png" alt="England Flag"
                         class="flag">Italy</button>
             </div>
         </div>
@@ -82,9 +82,9 @@
                 <h1>Click on the country you are visiting</h1>
             </div>
         </div>
-        <div class="row no-gutters england">
+        <div class="row no-gutters information" id="england">
             <div class="col-12 col-lg-6">
-                <div class="eng-information">
+                <div class="information">
                     <h1> England</h1>
                     <table class="eng-table">
                         <tr>
@@ -103,21 +103,16 @@
                             <td>Location:</td>
                             <td>200 Whitton Rd,<br>Twickenham, <br>TW2 7BA</td>
                         </tr>
-                        <tr>
-                            <td>By Train:</td>
-                            <td>Twickenham Rail Station - 10 min walk <br>
-                                Whitton Rail Station - 20 min walk <br>
-                                St Margaret's Rail Station - 20 min walk</td>
-                        </tr>
                     </table>
+                    <br>
+                    <a href="https://www.twickenhamstadium.com/getting-here" target="_blank" class="travel-link">Click here for travel information</a>
                     <div class="row no-gutters">
                         <div class="col">
-                            <button class="btn small-btn">
-                                <a href="https://www.eticketing.co.uk/rfu/Events/Index" target="_blank">Matchday
-                                    Tickets</a>
+                            <button class="small-btn">
+                                <a href="https://www.eticketing.co.uk/rfu/Events/Index" target="_blank" class="btn-hover">Matchday Tickets</a>
                             </button>
                             <button class="btn small-btn">
-                               <a href="#flights-booking">Book Flight</a> 
+                               <a href="#flights-booking" class="btn-hover">Book Flight</a> 
                             </button>
                         </div>
                     </div>
@@ -127,11 +122,51 @@
                 <h3>This is where the map will go</h3>
             </div>
         </div>
-        <!-- <div class="row no-gutters">
-            <div class="col-12 col-md-6 england">
-                <h1>Scotland - Edinburgh</h1>
-                <div class="eng-table">
+        <div class="row no-gutters information" id="scotland">
+            <div class="col-12 col-lg-6">
+                <div class="information">
+                    <h1>Scotland</h1>
                     <table>
+                        <tr>
+                            <th>City:</th>
+                            <th>Edinburgh</th>
+                        </tr>
+                        <tr>
+                            <td>Stadium:</td>
+                            <td>Murrayfield Stadium</td>
+                        </tr>
+                        <tr>
+                            <td>Capacity:</td>
+                            <td>67,1444</td>
+                        </tr>
+                        <tr>
+                            <td>Location:</td>
+                            <td>Roseburn Street,<br>Edinburgh, <br>EH12 5PJ</td>
+                        </tr>
+                    </table>
+                    <br>
+                    <a href="https://www.scottishrugby.org/tickets-and-events/getting-to-bt-murrayfield" target="_blank" class="travel-link">Click here for travel information</a>
+                    <div class="row no-gutters">
+                        <div class="col">
+                            <button class="small-btn">
+                                <a href="https://www.eticketing.co.uk/rfu/Events/Index" target="_blank" class="btn-hover">Matchday Tickets</a>
+                            </button>
+                            <button class="btn small-btn">
+                               <a href="#flights-booking" class="btn-hover">Book Flight</a> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <h3>This is where the map will go</h3>
+            </div>
+        </div>
+        <div class="row no-gutters information" id="wales">
+            <div class="col-12 col-lg-6">
+                <div class="information">
+                    <h1> England</h1>
+                    <table class="eng-table">
                         <tr>
                             <th>City:</th>
                             <th>London</th>
@@ -148,28 +183,37 @@
                             <td>Location:</td>
                             <td>200 Whitton Rd,<br>Twickenham, <br>TW2 7BA</td>
                         </tr>
-                        <tr>
-                            <td>By Train:</td>
-                            <td>Twickenham Rail Station - 10 min walk <br>
-                                Whitton Rail Station - 20 min walk <br>
-                                St Margaret's Rail Station - 20 min walk</td>
-                        </tr>
-
                     </table>
+                    <br>
+                    <a href="https://www.twickenhamstadium.com/getting-here" target="_blank" class="travel-link">Click here for travel information</a>
+                    <div class="row no-gutters">
+                        <div class="col">
+                            <button class="small-btn">
+                                <a href="https://www.eticketing.co.uk/rfu/Events/Index" target="_blank" class="btn-hover">Matchday Tickets</a>
+                            </button>
+                            <button class="btn small-btn">
+                               <a href="#flights-booking" class="btn-hover">Book Flight</a> 
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="col-12 col-md-6">
                 <h3>This is where the map will go</h3>
             </div>
         </div>
-        <div class="row no-gutters">
-            <div class="col-12 col-md-6 england">
-                <h1>Wales - Cardiff</h1>
-                <div class="eng-table">
-                    <table>
+        <div class="row no-gutters information" id="ireland">
+            <div class="col-12 col-lg-6">
+                <div class="information">
+                    <h1> England</h1>
+                    <table class="eng-table">
                         <tr>
-                            <th>Stadium:</th>
-                            <th>Twickenham Stadium</th>
+                            <th>City:</th>
+                            <th>London</th>
+                        </tr>
+                        <tr>
+                            <td>Stadium:</td>
+                            <td>Twickenham Stadium</td>
                         </tr>
                         <tr>
                             <td>Capacity:</td>
@@ -179,28 +223,37 @@
                             <td>Location:</td>
                             <td>200 Whitton Rd,<br>Twickenham, <br>TW2 7BA</td>
                         </tr>
-                        <tr>
-                            <td>By Train:</td>
-                            <td>Twickenham Rail Station - 10 min walk <br>
-                                Whitton Rail Station - 20 min walk <br>
-                                St Margaret's Rail Station - 20 min walk</td>
-                        </tr>
-
                     </table>
+                    <br>
+                    <a href="https://www.twickenhamstadium.com/getting-here" target="_blank" class="travel-link">Click here for travel information</a>
+                    <div class="row no-gutters">
+                        <div class="col">
+                            <button class="small-btn">
+                                <a href="https://www.eticketing.co.uk/rfu/Events/Index" target="_blank" class="btn-hover">Matchday Tickets</a>
+                            </button>
+                            <button class="btn small-btn">
+                               <a href="#flights-booking" class="btn-hover">Book Flight</a> 
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="col-12 col-md-6">
                 <h3>This is where the map will go</h3>
             </div>
         </div>
-        <div class="row no-gutters">
-            <div class="col-12 col-md-6 england">
-                <h1>Ireland - Dublin</h1>
-                <div class="eng-table">
-                    <table>
+        <div class="row no-gutters information" id="france">
+            <div class="col-12 col-lg-6">
+                <div class="information">
+                    <h1> England</h1>
+                    <table class="eng-table">
                         <tr>
-                            <th>Stadium:</th>
-                            <th>Twickenham Stadium</th>
+                            <th>City:</th>
+                            <th>London</th>
+                        </tr>
+                        <tr>
+                            <td>Stadium:</td>
+                            <td>Twickenham Stadium</td>
                         </tr>
                         <tr>
                             <td>Capacity:</td>
@@ -210,28 +263,37 @@
                             <td>Location:</td>
                             <td>200 Whitton Rd,<br>Twickenham, <br>TW2 7BA</td>
                         </tr>
-                        <tr>
-                            <td>By Train:</td>
-                            <td>Twickenham Rail Station - 10 min walk <br>
-                                Whitton Rail Station - 20 min walk <br>
-                                St Margaret's Rail Station - 20 min walk</td>
-                        </tr>
-
                     </table>
+                    <br>
+                    <a href="https://www.twickenhamstadium.com/getting-here" target="_blank" class="travel-link">Click here for travel information</a>
+                    <div class="row no-gutters">
+                        <div class="col">
+                            <button class="small-btn">
+                                <a href="https://www.eticketing.co.uk/rfu/Events/Index" target="_blank" class="btn-hover">Matchday Tickets</a>
+                            </button>
+                            <button class="btn small-btn">
+                               <a href="#flights-booking" class="btn-hover">Book Flight</a> 
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="col-12 col-md-6">
                 <h3>This is where the map will go</h3>
             </div>
         </div>
-        <div class="row no-gutters">
-            <div class="col-12 col-md-6 england">
-                <h1>France - Paris</h1>
-                <div class="eng-table">
-                    <table>
+        <div class="row no-gutters information" id="italy">
+            <div class="col-12 col-lg-6">
+                <div class="information">
+                    <h1> England</h1>
+                    <table class="eng-table">
                         <tr>
-                            <th>Stadium:</th>
-                            <th>Twickenham Stadium</th>
+                            <th>City:</th>
+                            <th>London</th>
+                        </tr>
+                        <tr>
+                            <td>Stadium:</td>
+                            <td>Twickenham Stadium</td>
                         </tr>
                         <tr>
                             <td>Capacity:</td>
@@ -241,51 +303,25 @@
                             <td>Location:</td>
                             <td>200 Whitton Rd,<br>Twickenham, <br>TW2 7BA</td>
                         </tr>
-                        <tr>
-                            <td>By Train:</td>
-                            <td>Twickenham Rail Station - 10 min walk <br>
-                                Whitton Rail Station - 20 min walk <br>
-                                St Margaret's Rail Station - 20 min walk</td>
-                        </tr>
-
                     </table>
+                    <br>
+                    <a href="https://www.twickenhamstadium.com/getting-here" target="_blank" class="travel-link">Click here for travel information</a>
+                    <div class="row no-gutters">
+                        <div class="col">
+                            <button class="small-btn">
+                                <a href="https://www.eticketing.co.uk/rfu/Events/Index" target="_blank" class="btn-hover">Matchday Tickets</a>
+                            </button>
+                            <button class="btn small-btn">
+                               <a href="#flights-booking" class="btn-hover">Book Flight</a> 
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="col-12 col-md-6">
                 <h3>This is where the map will go</h3>
             </div>
         </div>
-        <div class="row no-gutters">
-            <div class="col-12 col-md-6 england">
-                <h1>Italy - Rome</h1>
-                <div class="eng-table">
-                    <table>
-                        <tr>
-                            <th>Stadium:</th>
-                            <th>Twickenham Stadium</th>
-                        </tr>
-                        <tr>
-                            <td>Capacity:</td>
-                            <td>82,000</td>
-                        </tr>
-                        <tr>
-                            <td>Location:</td>
-                            <td>200 Whitton Rd,<br>Twickenham, <br>TW2 7BA</td>
-                        </tr>
-                        <tr>
-                            <td>By Train:</td>
-                            <td>Twickenham Rail Station - 10 min walk <br>
-                                Whitton Rail Station - 20 min walk <br>
-                                St Margaret's Rail Station - 20 min walk</td>
-                        </tr>
-
-                    </table>
-                </div>
-            </div>
-            <div class="col-12 col-md-6">
-                <h3>This is where the map will go</h3>
-            </div>
-        </div> -->
     </div>
     <!------------------ Flight pop-up ------------------>
 

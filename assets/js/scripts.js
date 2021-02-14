@@ -11,9 +11,12 @@ $(".country-btn").click(function () {
     }
 })
 
-$(".btn").hover(function () {
-    $(this).children().css("color", "rgba(0, 48, 43, 0.5)")
-}, function () {
-    $(this).children().css("color", "rgb(0, 48, 43)")
-}
-);
+// Add background color to dropdown menu
+$(".navbar-toggler").click(function() {
+    
+    if ($(".navbar").hasClass("toggler-bg")) {
+        $(".navbar").removeClass("toggler-bg");
+    } else {
+        $(".navbar").addClass("toggler-bg");
+    }
+})
