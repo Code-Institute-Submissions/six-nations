@@ -199,10 +199,10 @@ button.navbar-toggler {
 }
 
 .information {
-    margin: 30px;
+    margin: 10px;
 }
 
-.eng-table {
+.information table {
     font-size: 20px;
 }
 
@@ -227,6 +227,12 @@ tr th:nth-child(2) {
     color: #f9f9f9;
     opacity: 0.5;
     text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+    .information {
+    margin: 30px;
+    }
 }
 
 /* skyscanner widget */
