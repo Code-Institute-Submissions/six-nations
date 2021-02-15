@@ -47,27 +47,27 @@
     <div class="countries">
         <div class="row text-center">
             <div class="col-4 col-md-2 country-btn-container">
-                <button class="country-btn btn-hover"><img src="assets/images/england-flag.png" alt="England Flag"
+                <button class="country-btn btn-hover" id="england"><img src="assets/images/england-flag.png" alt="England Flag"
                         class="flag">England</button>
             </div>
             <div class="col-4 col-md-2 country-btn-container">
-                <button class="country-btn btn-hover"><img src="assets/images/scotland-flag.png" alt="England Flag"
+                <button class="country-btn btn-hover" id="scotland"><img src="assets/images/scotland-flag.png" alt="England Flag"
                         class="flag">Scotland</button>
             </div>
             <div class="col-4 col-md-2 country-btn-container">
-                <button class="country-btn btn-hover"><img src="assets/images/wales-flag-large.png" alt="England Flag"
+                <button class="country-btn btn-hover" id="wales"><img src="assets/images/wales-flag-large.png" alt="England Flag"
                         class="flag">Wales</button>
             </div>
             <div class="col-4 col-md-2 country-btn-container">
-                <button class="country-btn btn-hover"><img src="assets/images/ireland-flag.png" alt="England Flag"
+                <button class="country-btn btn-hover" id="ireland"><img src="assets/images/ireland-flag.png" alt="England Flag"
                         class="flag">Ireland</button>
             </div>
             <div class="col-4 col-md-2 country-btn-container">
-                <button class="country-btn btn-hover"><img src="assets/images/france-flag-xl.png" alt="England Flag"
+                <button class="country-btn btn-hover" id="france"><img src="assets/images/france-flag-xl.png" alt="England Flag"
                         class="flag">France</button>
             </div>
             <div class="col-4 col-md-2 country-btn-container">
-                <button class="country-btn btn-hover"><img src="assets/images/italy-flag-large.png" alt="England Flag"
+                <button class="country-btn btn-hover" id="italy"><img src="assets/images/italy-flag-large.png" alt="England Flag"
                         class="flag">Italy</button>
             </div>
         </div>
@@ -82,11 +82,11 @@
                 <h1>Click on the country you are visiting</h1>
             </div>
         </div>
-        <div class="row no-gutters information" id="england">
+        <div class="row no-gutters information" id="england-info">
             <div class="col-12 col-lg-6">
-                <div class="information">
+                <!-- <div class="information" id="england-info"> -->
                     <h1> England</h1>
-                    <table class="eng-table">
+                    <table>
                         <tr>
                             <th>City:</th>
                             <th>London</th>
@@ -118,15 +118,15 @@
                             </button>
                         </div>
                     </div>
-                </div>
+                <!-- </div> -->
             </div>
             <div class="col-12 col-md-6">
                 <h3>This is where the map will go</h3>
             </div>
         </div>
-        <div class="row no-gutters information" id="scotland">
+        <div class="row no-gutters information" id="scotland-info">
             <div class="col-12 col-lg-6">
-                <div class="information">
+                <!-- <div class="information" id="scotland-info"> -->
                     <h1>Scotland</h1>
                     <table>
                         <tr>
@@ -143,7 +143,7 @@
                         </tr>
                         <tr>
                             <td>Location:</td>
-                            <td>Roseburn Street,<br>Edinburgh, <br>EH12 5PJ</td>
+                            <td><a href="https://www.google.com/maps/place/Murrayfield+Stadium/@55.9422462,-3.2431168,17z/data=!3m1!4b1!4m5!3m4!1s0x4887c65417739d0d:0x8d2f9e9f766f3af5!8m2!3d55.9422432!4d-3.2409281" target="_blank">Roseburn Street,<br>Edinburgh, <br>EH12 5PJ</a></td>
                         </tr>
                     </table>
                     <br>
@@ -160,15 +160,15 @@
                             </button>
                         </div>
                     </div>
-                </div>
+                <!-- </div> -->
             </div>
             <div class="col-12 col-md-6">
                 <h3>This is where the map will go</h3>
             </div>
         </div>
-        <div class="row no-gutters information" id="wales">
+        <div class="row no-gutters information" id="wales-info">
             <div class="col-12 col-lg-6">
-                <div class="information">
+                <!-- <div class="information"> -->
                     <h1>Wales</h1>
                     <table>
                         <tr>
@@ -185,7 +185,7 @@
                         </tr>
                         <tr>
                             <td>Location:</td>
-                            <td>Westgate Street,<br>Cardiff, <br>CF10 1NS</td>
+                            <td><a href="https://www.google.com/maps/place/Principality+Stadium/@51.4782118,-3.1848228,17z/data=!3m1!4b1!4m5!3m4!1s0x486e1cb1dfc6fd81:0x39e2d294964328e9!8m2!3d51.4782085!4d-3.1826341" target="_blank">Westgate Street,<br>Cardiff, <br>CF10 1NS</a></td>
                         </tr>
                     </table>
                     <br>
@@ -202,15 +202,15 @@
                             </button>
                         </div>
                     </div>
-                </div>
+                <!-- </div> -->
             </div>
             <div class="col-12 col-md-6">
                 <h3>This is where the map will go</h3>
             </div>
         </div>
-        <div class="row no-gutters information" id="ireland">
+        <div class="row no-gutters information" id="ireland-info">
             <div class="col-12 col-lg-6">
-                <div class="information">
+                <!-- <div class="information"> -->
                     <h1>Ireland</h1>
                     <table>
                         <tr>
@@ -227,10 +227,10 @@
                         </tr>
                         <tr>
                             <td>Location:</td>
-                            <td>Lansdowne Road, <br>
+                            <td><a href="https://www.google.com/maps/place/Aviva+Stadium/@53.335235,-6.2306456,17z/data=!3m1!4b1!4m5!3m4!1s0x48670ec268eb8af9:0xe37e998e72032668!8m2!3d53.3352318!4d-6.2284569" target="_blank">Lansdowne Road, <br>
                                 Ballsbridge, <br>
                                 Dublin 4, <br>
-                                D04 K5F9</td>
+                                D04 K5F9</a></td>
                         </tr>
                     </table>
                     <br>
@@ -247,15 +247,15 @@
                             </button>
                         </div>
                     </div>
-                </div>
+                <!-- </div> -->
             </div>
             <div class="col-12 col-md-6">
                 <h3>This is where the map will go</h3>
             </div>
         </div>
-        <div class="row no-gutters information" id="france">
+        <div class="row no-gutters information" id="france-info">
             <div class="col-12 col-lg-6">
-                <div class="information">
+                <!-- <div class="information"> -->
                     <h1>France</h1>
                     <table>
                         <tr>
@@ -272,7 +272,7 @@
                         </tr>
                         <tr>
                             <td>Location:</td>
-                            <td>93200 Saint-Denis, <br>France</td>
+                            <td><a href="https://www.google.com/maps/search/stade+de+france/@48.9222385,2.351427,16z/data=!3m1!4b1" target="_blank">93200 Saint-Denis, <br>France</a></td>
                         </tr>
                     </table>
                     <br>
@@ -289,15 +289,15 @@
                             </button>
                         </div>
                     </div>
-                </div>
+                <!-- </div> -->
             </div>
             <div class="col-12 col-md-6">
                 <h3>This is where the map will go</h3>
             </div>
         </div>
-        <div class="row no-gutters information" id="italy">
+        <div class="row no-gutters information" id="italy-info">
             <div class="col-12 col-lg-6">
-                <div class="information">
+                <!-- <div class="information"> -->
                     <h1>Italy</h1>
                     <table>
                         <tr>
@@ -314,7 +314,7 @@
                         </tr>
                         <tr>
                             <td>Location:</td>
-                            <td>Viale dei Gladiatori, <br> 00135 <br> Roma</td>
+                            <td><a href="https://www.google.com/maps/place/Stadio+Olimpico/@41.9327487,12.4539724,16.89z/data=!3m1!5s0x132f60bc30367e65:0xc82548f4e51c3a58!4m8!1m2!2m1!1sstadio+olimpico!3m4!1s0x132f60bc3db30885:0x791c21ce91960617!8m2!3d41.934077!4d12.454725" target="_blank">Viale dei Gladiatori, <br> 00135 <br> Roma</a></td>
                         </tr>
                     </table>
                     <br>
@@ -331,7 +331,7 @@
                             </button>
                         </div>
                     </div>
-                </div>
+                <!-- </div> -->
             </div>
             <div class="col-12 col-md-6">
                 <h3>This is where the map will go</h3>

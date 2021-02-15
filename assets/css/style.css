@@ -218,6 +218,16 @@ tr th:nth-child(2) {
     padding-left: 15px;
 }
 
+table td a {
+    color: #f9f9f9;
+}
+
+table td a:hover {
+    color: #f9f9f9;
+    opacity: 0.5;
+    text-decoration: none;
+}
+
 .travel-link {
     color: #f9f9f9;
     font-weight: 500;

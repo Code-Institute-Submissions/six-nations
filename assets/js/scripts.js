@@ -1,4 +1,12 @@
-// BUTTONS
+// Add background color to dropdown menu
+$(".navbar-toggler").click(function() {
+    
+    if ($(".navbar").hasClass("toggler-bg")) {
+        $(".navbar").removeClass("toggler-bg");
+    } else {
+        $(".navbar").addClass("toggler-bg");
+    }
+})
 
 $(".country-btn").click(function () {
 
@@ -11,12 +19,14 @@ $(".country-btn").click(function () {
     }
 })
 
-// Add background color to dropdown menu
-$(".navbar-toggler").click(function() {
-    
-    if ($(".navbar").hasClass("toggler-bg")) {
-        $(".navbar").removeClass("toggler-bg");
-    } else {
-        $(".navbar").addClass("toggler-bg");
-    }
+$(".country-btn").click(function(){
+
+    $(".information").hide();
+
+    var selectedCountry = `#${this.id}-info`
+
+    $(selectedCountry).show();
 })
+
+
+
