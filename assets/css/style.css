@@ -180,7 +180,6 @@ button.navbar-toggler {
 .country-btn-active {
     opacity: 1;
     box-shadow: 0px 0px 10px 10px rgba(249,249,249,0.5);
-    transition: 0.1s;
 }
 
 .country-btn:focus {
@@ -194,6 +193,7 @@ button.navbar-toggler {
 }
 
 /* country information  */
+
 .information-container {
     color: #f9f9f9;
 }

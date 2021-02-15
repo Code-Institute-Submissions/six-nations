@@ -1,3 +1,7 @@
+$("document").ready(function(){
+    $(".information").hide(); //hide all information when page loads
+})
+
 // Add background color to dropdown menu
 $(".navbar-toggler").click(function() {
     
@@ -17,16 +21,16 @@ $(".country-btn").click(function () {
         $(".country-btn").children("img").removeClass("country-btn-active");
         $(this).children("img").addClass("country-btn-active");
     }
-})
 
-$(".country-btn").click(function(){
-
+    // Hide/show country's information/map
     $(".information").hide();
 
-    var selectedCountry = `#${this.id}-info`
+    var selectedCountry = `#${this.id}-info`;
 
     $(selectedCountry).show();
 })
+
+// 
 
 
 
