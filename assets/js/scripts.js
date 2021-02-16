@@ -78,7 +78,7 @@ const countriesMap = () => {
             </div>`);
         //Country Information
         $("#information-container").append(
-            `<div class="row no-gutters information" id="${country}-info">
+            `<div class="row no-gutters information d-none" id="${country}-info">
             <div class="col-12 col-lg-6">
                 <h1>${country.charAt(0).toUpperCase() + country.slice(1)}</h1>
                 <table>
@@ -119,8 +119,8 @@ const countriesMap = () => {
                 <h3>This is where the map will go</h3>
             </div>
         </div>`
-        )
-    })
+        );
+    });
 }
 
 // When a Country selector is clicked
@@ -134,15 +134,14 @@ const countrySelector = (function () {
             $(".country-btn").children("img").addClass("d-none");
         }
 
-        $("#information").children().hide();
         var selectedCountry = `#${this.id}-info`;
-        $(selectedCountry).show();
+        $("#information-container").children().addClass("d-none");
+        $(selectedCountry).removeClass("d-none");
     });
 })
 
 
 $("document").ready(function () {
-    $(".information").hide(); //hide all information when page loads
 
     countriesMap();
     countrySelector();
