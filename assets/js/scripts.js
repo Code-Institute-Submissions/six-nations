@@ -49,9 +49,9 @@ const info = {
         stadium: "Stade de France",
         capacity: "81,338",
         locationLink: "https://www.google.com/maps/search/stade+de+france/@48.9222385,2.351427,16z/data=!3m1!4b1",
-        addressLineOne: "93200 Saint-Denis",
-        addressLineTwo: "Paris",
-        addressLineThree: "",
+        addressLineOne: "93200",
+        addressLineTwo: "Saint-Denis",
+        addressLineThree: "Paris",
         travelLink: "https://www.stadefrance.com/en/practical-information/how-to-get-there",
         ticketLink: "https://www.stadefrance.com/en/tickets"
     },
