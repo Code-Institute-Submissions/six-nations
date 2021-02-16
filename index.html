@@ -16,65 +16,42 @@
 
 <body class="d-flex flex-column bg-color-white">
     <!------------------ nav bar ------------------>
-    <div class="hero-container container-fluid">
-        <nav class="navbar navbar-expand-lg navbar-dark">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Countries</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
-                    </li>
-                </ul>
+    <div class="hero-bg">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Countries</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="row container-fluid hero-callout">
+                <div class="col-7 col-md-6 pr-0">
+                    <h1>THE SIX NATIONS</h1>
+                    <h2>CITY GUIDE</h2>
+                </div>
             </div>
-        </nav>
-        <div class="row container-fluid">
-            <div class="col-6 col-md-6 hero-callout">
-                <h1>THE SIX NATIONS</h1>
-                <h2>CITY GUIDE</h2>
+        <!------------------ country buttons ------------------>
+            <div class="country-selection">
+                <div class="row text-center no-gutters" id="countries">
+                </div>
             </div>
-        </div>
-    </div>
-    <!------------------ country buttons ------------------>
-    <div class="countries">
-        <div class="row text-center">
-            <div class="col-4 col-md-2 country-btn-container">
-                <button class="country-btn btn-hover" id="england"><img src="assets/images/england-flag.png"
-                        alt="England Flag" class="flag">England</button>
-            </div>
-            <div class="col-4 col-md-2 country-btn-container">
-                <button class="country-btn btn-hover" id="scotland"><img src="assets/images/scotland-flag.png"
-                        alt="England Flag" class="flag">Scotland</button>
-            </div>
-            <div class="col-4 col-md-2 country-btn-container">
-                <button class="country-btn btn-hover" id="wales"><img src="assets/images/wales-flag-large.png"
-                        alt="England Flag" class="flag">Wales</button>
-            </div>
-            <div class="col-4 col-md-2 country-btn-container">
-                <button class="country-btn btn-hover" id="ireland"><img src="assets/images/ireland-flag.png"
-                        alt="England Flag" class="flag">Ireland</button>
-            </div>
-            <div class="col-4 col-md-2 country-btn-container">
-                <button class="country-btn btn-hover" id="france"><img src="assets/images/france-flag-xl.png"
-                        alt="England Flag" class="flag">France</button>
-            </div>
-            <div class="col-4 col-md-2 country-btn-container">
-                <button class="country-btn btn-hover" id="italy"><img src="assets/images/italy-flag-large.png"
-                        alt="England Flag" class="flag">Italy</button>
-            </div>
-        </div>
     </div>
 
     <!------------------ map/info section ------------------>
-    
+
     <!------- England ------->
     <div class="information-container">
         <div class="row no-gutters information" id="england-info">
@@ -119,7 +96,7 @@
             </div>
         </div>
 
-         <!------- Scotland ------->
+        <!------- Scotland ------->
         <div class="row no-gutters information" id="scotland-info">
             <div class="col-12 col-lg-6">
                 <h1>Scotland</h1>
@@ -162,7 +139,7 @@
             </div>
         </div>
 
-         <!------- Wales ------->
+        <!------- Wales ------->
         <div class="row no-gutters information" id="wales-info">
             <div class="col-12 col-lg-6">
                 <h1>Wales</h1>
@@ -206,7 +183,7 @@
             </div>
         </div>
 
-         <!------- Ireland ------->
+        <!------- Ireland ------->
         <div class="row no-gutters information" id="ireland-info">
             <div class="col-12 col-lg-6">
                 <h1>Ireland</h1>
@@ -251,7 +228,7 @@
             </div>
         </div>
 
-         <!------- France ------->
+        <!------- France ------->
         <div class="row no-gutters information" id="france-info">
             <div class="col-12 col-lg-6">
                 <h1>France</h1>
@@ -294,7 +271,7 @@
                 <h3>This is where the map will go</h3>
             </div>
         </div>
-        
+
         <!------- Italy ------->
         <div class="row no-gutters information" id="italy-info">
             <div class="col-12 col-lg-6">
