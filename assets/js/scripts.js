@@ -1,5 +1,5 @@
 const countries = ["england", "wales", "scotland", "ireland", "france", "italy"]
-const info = {
+const cityInfo = {
     england: {
         city: "London",
         stadium: "Twickenham Stadium",
@@ -84,29 +84,29 @@ const countriesMap = () => {
                 <table>
                     <tr>
                         <th>City:</th>
-                        <th>${info[`${country}`]["city"]}</th>
+                        <th>${cityInfo[`${country}`]["city"]}</th>
                     </tr>
                     <tr>
                         <td>Stadium:</td>
-                        <td>${info[`${country}`]["stadium"]}</td>
+                        <td>${cityInfo[`${country}`]["stadium"]}</td>
                     </tr>
                     <tr>
                         <td>Capacity:</td>
-                        <td>${info[`${country}`]["capacity"]}</td>
+                        <td>${cityInfo[`${country}`]["capacity"]}</td>
                     </tr>
                     <tr>
                         <td>Location:</td>
-                        <td><a href="${info[`${country}`]["locationLink"]}"
-                                target="_blank">${info[`${country}`]["addressLineOne"]}<br>${info[`${country}`]["addressLineTwo"]}<br>${info[`${country}`]["addressLineThree"]}</a></td>
+                        <td><a href="${cityInfo[`${country}`]["locationLink"]}"
+                                target="_blank">${cityInfo[`${country}`]["addressLineOne"]}<br>${cityInfo[`${country}`]["addressLineTwo"]}<br>${cityInfo[`${country}`]["addressLineThree"]}</a></td>
                     </tr>
                 </table>
                 <br>
-                <a href="${info[`${country}`]["travelLink"]}" target="_blank" class="travel-link">Click
+                <a href="${cityInfo[`${country}`]["travelLink"]}" target="_blank" class="travel-link">Click
                     here for travel information</a>
                 <div class="row no-gutters">
                     <div class="col">
                         <button class="small-btn">
-                            <a href="${info[`${country}`]["ticketLink"]}" target="_blank"
+                            <a href="${cityInfo[`${country}`]["ticketLink"]}" target="_blank"
                                 class="btn-hover">Matchday Tickets</a>
                         </button>
                         <button class="btn small-btn">
@@ -116,7 +116,7 @@ const countriesMap = () => {
                 </div>
             </div>
             <div class="col-12 col-md-6">
-                <h3>This is where the map will go</h3>
+                <div id="map"></div>
             </div>
         </div>`
         );
