@@ -1,32 +1,79 @@
 function initMap() {
-    var map = new google.maps.Map(document.getElementById("map"), {
-       zoom: 4,
+    map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 11,
         center: {
-            lat: 49.457413, 
+            lat: 49.457413,
             lng: 6.062938
-        } 
+        }
     });
-
-
-    var labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
-    var locations = [
-        { lat: 40.785091, lng: -73.968285 },
-        { lat: 41.084045, lng: -73.874245 },
-        { lat: 40.754932, lng: -73.984016 }
-    ];
-
-    var markers = locations.map(function(location, i) {
-        return new google.maps.Marker({
-            position: location,
-            label: labels[i % labels.length]
-        });
-    });
-
-    var markerCluster = new MarkerClusterer(map, markers, { imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m' });
-
 
 }
+
+//  https://stackoverflow.com/questions/28499141how-to-change-google-map-center-by-clicking-a-button/28500306
+
+function newLocation(newLat, newLng) {
+    map.setCenter({
+        lat: newLat,
+        lng: newLng
+    });
+}
+
+
+$("document").ready(function () {
+
+    $("#england").on('click', function () {
+        newLocation(51.4560, -0.3415);
+    });
+    $("#wales").on('click', function () {
+        newLocation(51.4782, -3.1826);
+    });
+    $("#scotland").on('click', function () {
+        newLocation(55.9422, -3.2409);
+    });
+    $("#ireland").on('click', function () {
+        newLocation(53.3352, -6.2285);
+    });
+    $("#france").on('click', function () {
+        newLocation(48.9245, 2.3602);
+    });
+    $("#italy").on('click', function () {
+        newLocation(41.9341, 12.4547);
+    });
+    })
+
+
+
+
+
+// 
+// function changeCenter(location) {
+//             var location = {
+//                 lat: "${cityInfo[`${country}`][lat]}",
+//                 lng: "${cityInfo[`${country}`][lng]}"
+//             }
+//             map.setCenter(location);
+
+//         }
+
+    // var labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+    // var locations = [
+    //     { lat: 40.785091, lng: -73.968285 },
+    //     { lat: 41.084045, lng: -73.874245 },
+    //     { lat: 40.754932, lng: -73.984016 }
+    // ];
+
+    // var markers = locations.map(function(location, i) {
+    //     return new google.maps.Marker({
+    //         position: location,
+    //         label: labels[i % labels.length]
+    //     });
+    // });
+
+    // var markerCluster = new MarkerClusterer(map, markers, { imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m' });
+
+
+
 
 
 

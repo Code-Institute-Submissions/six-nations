@@ -68,14 +68,15 @@ const cityInfo = {
     }
 }
 
-
 const countriesMap = () => {
     countries.map((country) => {
+        
         $("#countries").append(
             `<div class="col-4 col-sm-2 country-btn-container">
                 <button class="country-btn btn-hover" id="${country}"><img src="assets/images/flags/${country}-flag.png"
                         alt="${country} Flag" class="flag d-none">${country.charAt(0).toUpperCase() + country.slice(1)}</button>
             </div>`);
+
         //Country Information
         $("#information-container").append(
             `<div class="row no-gutters information d-none" id="${country}-info">
@@ -115,11 +116,8 @@ const countriesMap = () => {
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-6">
-                <div id="map"></div>
-            </div>
         </div>`
-        );
+        );   
     });
 }
 
@@ -157,3 +155,4 @@ $(".navbar-toggler").click(function () {
         $(".navbar").addClass("toggler-bg");
     }
 })
+
