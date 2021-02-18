@@ -80,7 +80,7 @@ const countriesMap = () => {
         //Country Information
         $("#information-container").append(
             `<div class="col-12 col-lg-6 order-1 information d-none" id="${country}-info">
-            
+            <div class="information-table">
                 <h1>${country.charAt(0).toUpperCase() + country.slice(1)}</h1>
                 <table>
                     <tr>
@@ -101,9 +101,11 @@ const countriesMap = () => {
                                 target="_blank">${cityInfo[`${country}`]["addressLineOne"]}<br>${cityInfo[`${country}`]["addressLineTwo"]}<br>${cityInfo[`${country}`]["addressLineThree"]}</a></td>
                     </tr>
                 </table>
+              
                 <br>
                 <a href="${cityInfo[`${country}`]["travelLink"]}" target="_blank" class="travel-link">Click
                     here for travel information</a>
+                      </div>
                 <div class="row no-gutters">
                     <div class="col">
                         <button class="small-btn">
@@ -116,7 +118,7 @@ const countriesMap = () => {
                     </div>
                 </div>
         </div>`
-        );   
+        );
     });
 }
 
@@ -151,7 +153,21 @@ $("document").ready(function () {
 
     countriesMap();
     countrySelector();
+    scrollTo();
+
 })
+
+// code for function below found at https://stackoverflow.com/questions/18071046/smooth-scroll-to-specific-div-on-click/18071231
+// add smooth scroll when country is selected
+const scrollTo = () => {
+    $(".country-btn").click(function () {
+        $('html,body').animate({
+            scrollTop: $("#information-container").offset().top
+        },
+            'slow');
+    })
+}
+
 
 
 // Add background color to dropdown menu
