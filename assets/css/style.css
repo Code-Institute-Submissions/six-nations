@@ -239,7 +239,7 @@ table td a:hover {
 
 @media screen and (min-width: 768px) {
     .information {
-    margin: 30px;
+    padding: 30px 60px;
     }
 }
 
@@ -259,6 +259,9 @@ table td a:hover {
 }
 
 #map {
-    height: 500px;
-    width: 500px;
+    height: 350px;
+    width: 40vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
 }

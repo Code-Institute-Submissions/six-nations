@@ -1,23 +1,24 @@
 function initMap() {
     map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 11,
+        zoom: 14,
         center: {
             lat: 49.457413,
             lng: 6.062938
         }
     });
-
 }
 
-//  https://stackoverflow.com/questions/28499141how-to-change-google-map-center-by-clicking-a-button/28500306
-
+// set new location plus add marker
 function newLocation(newLat, newLng) {
     map.setCenter({
         lat: newLat,
         lng: newLng
     });
+    new google.maps.Marker({
+        position: {lat:newLat, lng:newLng},
+        map: map
+    })
 }
-
 
 $("document").ready(function () {
 
@@ -39,7 +40,10 @@ $("document").ready(function () {
     $("#italy").on('click', function () {
         newLocation(41.9341, 12.4547);
     });
-    })
+
+})
+
+
 
 
 

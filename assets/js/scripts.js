@@ -70,7 +70,7 @@ const cityInfo = {
 
 const countriesMap = () => {
     countries.map((country) => {
-        
+        //Build buttons
         $("#countries").append(
             `<div class="col-4 col-sm-2 country-btn-container">
                 <button class="country-btn btn-hover" id="${country}"><img src="assets/images/flags/${country}-flag.png"
@@ -79,8 +79,8 @@ const countriesMap = () => {
 
         //Country Information
         $("#information-container").append(
-            `<div class="row no-gutters information d-none" id="${country}-info">
-            <div class="col-12 col-lg-6">
+            `<div class="col-12 col-lg-6 order-1 information d-none" id="${country}-info">
+            
                 <h1>${country.charAt(0).toUpperCase() + country.slice(1)}</h1>
                 <table>
                     <tr>
@@ -115,7 +115,6 @@ const countriesMap = () => {
                         </button>
                     </div>
                 </div>
-            </div>
         </div>`
         );   
     });
@@ -125,6 +124,7 @@ const countriesMap = () => {
 const countrySelector = (function () {
     $(".country-btn").click(function () {
 
+        // Show/hide flags when country is selected
         if ($(this).children("img").hasClass("d-none")) {
             $(".country-btn").children("img").addClass("d-none"),
                 $(this).children("img").removeClass("d-none");
@@ -132,9 +132,17 @@ const countrySelector = (function () {
             $(".country-btn").children("img").addClass("d-none");
         }
 
+        // Show information when country selected
         var selectedCountry = `#${this.id}-info`;
-        $("#information-container").children().addClass("d-none");
-        $(selectedCountry).removeClass("d-none");
+        $("#information-container").children(".information").addClass("d-none");
+        $(selectedCountry).removeClass("d-none").addClass("active");
+
+        // show map when country selected
+        if ($(selectedCountry).hasClass("active")) {
+            $("#map-container").removeClass("d-none");
+        } else {
+            $("#map-container").addClass("d-none");
+        }
     });
 })
 
