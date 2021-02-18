@@ -247,6 +247,42 @@ table td a:hover {
     .information {
     padding: 30px 60px;
     }
+    .information-table {
+        font-size: 25px;
+    }
+}
+
+/* map and hospitality selectors  */
+
+#map {
+    height: 375px;
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hospitality-selectors{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.selector {
+    width: 90px;
+    background-color: #23726c;
+    display: inline-block;
+    border: 3px solid #00302b;
+    margin: 0px 5px;
+    font-size: 50px;
+    color: #f9f9f9;
+    cursor: pointer;
+}
+
+
+@media screen and (min-width: 768px) {
+    #map {
+    width: 50vw;
+    }
 }
 
 /* skyscanner widget */
@@ -264,17 +300,5 @@ table td a:hover {
     border-radius: 10px;
 }
 
-#map {
-    height: 350px;
-    width: 90vw;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-}
 
-@media screen and (min-width: 768px) {
-    #map {
-    width: 40vw;
-    }
-}
 

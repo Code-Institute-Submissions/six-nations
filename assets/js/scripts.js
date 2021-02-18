@@ -67,6 +67,21 @@ const cityInfo = {
         ticketLink: "https://ticket.federugby.it/"
     }
 }
+const hospitalitySelectors = {
+    hotels: {
+        type: "hotels",
+        icon: "fas fa-bed"
+    },
+    restuarants: {
+        type: "restuarants",
+        icon: "fas fa-utensils"
+    },
+    bars: {
+        type: "bars",
+        icon: "fas fa-beer"
+    }
+}
+
 
 const countriesMap = () => {
     countries.map((country) => {
@@ -79,7 +94,7 @@ const countriesMap = () => {
 
         //Country Information
         $("#information-container").append(
-            `<div class="col-12 col-lg-6 order-1 information d-none" id="${country}-info">
+            `<div class="col-12 col-lg-5 order-1 information d-none" id="${country}-info">
             <div class="information-table">
                 <h1>${country.charAt(0).toUpperCase() + country.slice(1)}</h1>
                 <table>
@@ -148,6 +163,16 @@ const countrySelector = (function () {
     });
 })
 
+// code for function below found at https://stackoverflow.com/questions/18071046/smooth-scroll-to-specific-div-on-click/18071231
+// add smooth scroll when country is selected
+const scrollTo = () => {
+    $(".country-btn").click(function () {
+        $('html,body').animate({
+            scrollTop: $(".country-btn").offset().top
+        },
+            'slow');
+    })
+}
 
 $("document").ready(function () {
 
@@ -156,19 +181,6 @@ $("document").ready(function () {
     scrollTo();
 
 })
-
-// code for function below found at https://stackoverflow.com/questions/18071046/smooth-scroll-to-specific-div-on-click/18071231
-// add smooth scroll when country is selected
-const scrollTo = () => {
-    $(".country-btn").click(function () {
-        $('html,body').animate({
-            scrollTop: $("#information-container").offset().top
-        },
-            'slow');
-    })
-}
-
-
 
 // Add background color to dropdown menu
 $(".navbar-toggler").click(function () {
