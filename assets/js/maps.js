@@ -1,4 +1,5 @@
-let markers = [];
+var markers = [];
+var prev_infowindow = false;
 const locations = {
     england: {
         latitude: "51.4560",
@@ -44,7 +45,6 @@ function newLocation(newLat, newLng) {
     map.setCenter({
         lat: newLat,
         lng: newLng,
-        zoom: 5
     });
     map.setZoom(14);
     var marker = new google.maps.Marker({
@@ -64,20 +64,33 @@ function clearMarkers() {
     markers = [];
 }
 
-
 // https://developers.google.com/maps/documentation/javascript/examples/place-search
 // create markers
 function createMarker(place) {
-  if (!place.geometry || !place.geometry.location) return;
-  const marker = new google.maps.Marker({
-    map,
-    position: place.geometry.location,
-  });
-  google.maps.event.addListener(marker, "click", () => {
-    infowindow.setContent(place.name || "");
-    infowindow.open(map);
-  });
+    if (!place.geometry || !place.geometry.location) return;
+    const marker = new google.maps.Marker({
+        map: map,
+        position: place.geometry.location,
+        title: place.name,
+    });
+
+   // https://stackoverflow.com/questions/2223574/google-maps-auto-close-open-infowindows
+    // close/open info window
+    var infowindow = new google.maps.InfoWindow({
+        content: place.name,
+    });
+ 
+    marker.addListener("click", () => {
+        if (prev_infowindow) {
+            prev_infowindow.close();
+        }
+        prev_infowindow = infowindow;
+        infowindow.open(map, marker);
+    });
+    
+    markers.push(marker);
 }
+
 
 // https://developers.google.com/maps/documentation/javascript/places#place_search_requests
 // function to find local hospitality
@@ -85,15 +98,15 @@ const localHospitality = (hospitalityType) => {
     var request = {
         type: hospitalityType,
         location: map.getCenter(),
-        radius: '1000',
+        radius: '900'
     };
 
     service = new google.maps.places.PlacesService(map);
     service.nearbySearch(request, callback);
-    
+
     function callback(results, status) {
         if (status == google.maps.places.PlacesServiceStatus.OK) {
-             clearMarkers();
+            clearMarkers();
             for (var i = 0; i < results.length; i++) {
                 createMarker(results[i]);
             }
@@ -106,12 +119,8 @@ const localHospitality = (hospitalityType) => {
 
 $("document").ready(function () {
 
-    // mapSelector();
-
-
     // find local hospitality
     $("#hotels").on('click', function () {
-       
         localHospitality(['lodging']);
     })
     $("#restuarants").on('click', function () {
