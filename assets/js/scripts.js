@@ -9,7 +9,9 @@ const cityInfo = {
         addressLineTwo: "Twickenham",
         addressLineThree: "TW2 7BA",
         travelLink: "https://www.twickenhamstadium.com/getting-here",
-        ticketLink: "https://www.eticketing.co.uk/rfu/Events/Index"
+        ticketLink: "https://www.eticketing.co.uk/rfu/Events/Index",
+        latitude: "51.4560",
+        longitude: "-0.3415"
     },
     wales: {
         city: "Cardiff",
@@ -20,7 +22,9 @@ const cityInfo = {
         addressLineTwo: "Cardiff",
         addressLineThree: "CF10 1NS",
         travelLink: "https://www.principalitystadium.wales/information/about-the-venue/",
-        ticketLink: "https://www.eticketing.co.uk/principalitystadium/"
+        ticketLink: "https://www.eticketing.co.uk/principalitystadium/",
+        latitude: "51.4782", 
+        longitude: "-3.1826"
     },
     scotland: {
         city: "Edinburgh",
@@ -31,7 +35,10 @@ const cityInfo = {
         addressLineTwo: "Edinburgh",
         addressLineThree: "EH12 5PJ",
         travelLink: "https://www.scottishrugby.org/tickets-and-events/getting-to-bt-murrayfield",
-        ticketLink: "https://www.scottishrugby.org/tickets-and-events/"
+        ticketLink: "https://www.scottishrugby.org/tickets-and-events/",
+        latitude: "55.9422", 
+        longitude: "-3.2409"
+        
     },
     ireland: {
         city: "Dublin",
@@ -42,7 +49,9 @@ const cityInfo = {
         addressLineTwo: "Ballsbridge",
         addressLineThree: "D04 K5F9",
         travelLink: "https://www.avivastadium.ie/getting-here",
-        ticketLink: "https://www.irishrugby.ie/ireland/tickets/"
+        ticketLink: "https://www.irishrugby.ie/ireland/tickets/",
+        latitude: "53.3352",  
+        longitude: "-6.2285"
     },
     france: {
         city: "Paris",
@@ -53,7 +62,9 @@ const cityInfo = {
         addressLineTwo: "Saint-Denis",
         addressLineThree: "Paris",
         travelLink: "https://www.stadefrance.com/en/practical-information/how-to-get-there",
-        ticketLink: "https://www.stadefrance.com/en/tickets"
+        ticketLink: "https://www.stadefrance.com/en/tickets",
+        latitude: "48.9245", 
+        longitude: "2.3602"
     },
     italy: {
         city: "Rome",
@@ -64,24 +75,11 @@ const cityInfo = {
         addressLineTwo: "00135",
         addressLineThree: "Roma",
         travelLink: "https://www.eventtravel.com/olympic-stadium-rome",
-        ticketLink: "https://ticket.federugby.it/"
+        ticketLink: "https://ticket.federugby.it/",
+        latitude: "41.9341", 
+        longitude: "12.4547"
     }
 }
-const hospitalitySelectors = {
-    hotels: {
-        type: "hotels",
-        icon: "fas fa-bed"
-    },
-    restuarants: {
-        type: "restuarants",
-        icon: "fas fa-utensils"
-    },
-    bars: {
-        type: "bars",
-        icon: "fas fa-beer"
-    }
-}
-
 
 const countriesMap = () => {
     countries.map((country) => {
