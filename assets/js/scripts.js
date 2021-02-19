@@ -23,7 +23,7 @@ const cityInfo = {
         addressLineThree: "CF10 1NS",
         travelLink: "https://www.principalitystadium.wales/information/about-the-venue/",
         ticketLink: "https://www.eticketing.co.uk/principalitystadium/",
-        latitude: "51.4782", 
+        latitude: "51.4782",
         longitude: "-3.1826"
     },
     scotland: {
@@ -36,9 +36,9 @@ const cityInfo = {
         addressLineThree: "EH12 5PJ",
         travelLink: "https://www.scottishrugby.org/tickets-and-events/getting-to-bt-murrayfield",
         ticketLink: "https://www.scottishrugby.org/tickets-and-events/",
-        latitude: "55.9422", 
+        latitude: "55.9422",
         longitude: "-3.2409"
-        
+
     },
     ireland: {
         city: "Dublin",
@@ -50,7 +50,7 @@ const cityInfo = {
         addressLineThree: "D04 K5F9",
         travelLink: "https://www.avivastadium.ie/getting-here",
         ticketLink: "https://www.irishrugby.ie/ireland/tickets/",
-        latitude: "53.3352",  
+        latitude: "53.3352",
         longitude: "-6.2285"
     },
     france: {
@@ -63,7 +63,7 @@ const cityInfo = {
         addressLineThree: "Paris",
         travelLink: "https://www.stadefrance.com/en/practical-information/how-to-get-there",
         ticketLink: "https://www.stadefrance.com/en/tickets",
-        latitude: "48.9245", 
+        latitude: "48.9245",
         longitude: "2.3602"
     },
     italy: {
@@ -76,9 +76,12 @@ const cityInfo = {
         addressLineThree: "Roma",
         travelLink: "https://www.eventtravel.com/olympic-stadium-rome",
         ticketLink: "https://ticket.federugby.it/",
-        latitude: "41.9341", 
+        latitude: "41.9341",
         longitude: "12.4547"
     }
+}
+const uppercaseFirstCharacter = (name) => {
+    return name.charAt(0).toUpperCase() + name.slice(1)
 }
 
 const countriesMap = () => {
@@ -87,14 +90,14 @@ const countriesMap = () => {
         $("#countries").append(
             `<div class="col-4 col-sm-2 country-btn-container">
                 <button class="country-btn btn-hover" id="${country}"><img src="assets/images/flags/${country}-flag.png"
-                        alt="${country} Flag" class="flag d-none">${country.charAt(0).toUpperCase() + country.slice(1)}</button>
+                        alt="${country} Flag" class="flag d-none">${uppercaseFirstCharacter(country)}</button>
             </div>`);
 
         //Country Information
         $("#information-container").append(
             `<div class="col-12 col-lg-5 order-1 information d-none" id="${country}-info">
             <div class="information-table">
-                <h1>${country.charAt(0).toUpperCase() + country.slice(1)}</h1>
+                <h1>${uppercaseFirstCharacter(country)}</h1>
                 <table>
                     <tr>
                         <th>City:</th>
@@ -141,9 +144,10 @@ const countrySelector = (function () {
 
         // Show/hide flags when country is selected
         if ($(this).children("img").hasClass("d-none")) {
-            $(".country-btn").children("img").addClass("d-none"),
-                $(this).children("img").removeClass("d-none");
+            $(".country-btn").children("img").addClass("d-none");
+            $(this).children("img").removeClass("d-none");
         } else {
+
             // $(".country-btn").children("img").addClass("d-none");
         }
 
@@ -153,9 +157,7 @@ const countrySelector = (function () {
         $(selectedCountry).removeClass("d-none").addClass("active");
 
         // show map when country selected
-        if ($(selectedCountry).hasClass("active")) {
-            $("#map-container").removeClass("d-none");
-        } 
+        $("#map-container").removeClass("d-none");
     });
 })
 
@@ -164,7 +166,7 @@ const countrySelector = (function () {
 const scrollTo = () => {
     $(".country-btn").click(function () {
         $('html,body').animate({
-            scrollTop: $(".country-btn").offset().top -50
+            scrollTop: $(".country-btn").offset().top - 50
         },
             'slow');
     })
@@ -180,6 +182,6 @@ $("document").ready(function () {
 
 // Add background color to dropdown menu
 $(".navbar-toggler").click(function () {
-        $(".navbar").toggleClass("toggler-bg");
+    $(".navbar").toggleClass("toggler-bg");
 })
 
