@@ -144,19 +144,18 @@ const countrySelector = (function () {
             $(".country-btn").children("img").addClass("d-none"),
                 $(this).children("img").removeClass("d-none");
         } else {
-            $(".country-btn").children("img").addClass("d-none");
+            // $(".country-btn").children("img").addClass("d-none");
         }
 
         // Show information when country selected
         var selectedCountry = `#${this.id}-info`;
-        $("#information-container").addClass("d-none");
+        $("#information-container").children(".information").addClass("d-none");
         $(selectedCountry).removeClass("d-none").addClass("active");
 
         // show map when country selected
         if ($(selectedCountry).hasClass("active")) {
             $("#map-container").removeClass("d-none");
         } 
-
     });
 })
 
@@ -181,8 +180,6 @@ $("document").ready(function () {
 
 // Add background color to dropdown menu
 $(".navbar-toggler").click(function () {
-
-    $(".navbar").toggleClass("toggler-bg");
-
+        $(".navbar").toggleClass("toggler-bg");
 })
 
