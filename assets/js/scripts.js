@@ -154,31 +154,6 @@ const countriesMap = () => {
     });
 }
 
-
-// When a Country selector is clicked
-// const countrySelector = () => {
-
-//     $(".country-btn").click(function () {
-
-//         // Show/hide flags when country is selected
-//         // if ($(this).children("img").hasClass("d-none")) {
-//         //     $(".country-btn").children("img").addClass("d-none");
-//         //     $(this).children("img").removeClass("d-none");
-//         // } else {
-
-//         //     // $(".country-btn").children("img").addClass("d-none");
-//         // }
-
-//         // Show information when country selected
-//         var selectedCountry = `#${this.id}-info`;
-//         $("#information-container").children(".information").addClass("d-none");
-//         $(selectedCountry).removeClass("d-none").addClass("active");
-
-//         // show map when country selected
-//         $("#map-container").removeClass("d-none");
-//     });
-// }
-
 // code for function below found at https://stackoverflow.com/questions/18071046/smooth-scroll-to-specific-div-on-click/18071231
 // add smooth scroll when country is selected
 const scrollTo = () => {
