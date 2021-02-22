@@ -90,7 +90,7 @@ const countriesMap = () => {
         $("#countries").append(
             `<div class="col-4 col-sm-2 country-btn-container">
                 <button class="country-btn btn-hover" id="${country}"><img src="assets/images/flags/${country}-flag.png"
-                        alt="${country} Flag" class="flag d-none">${uppercaseFirstCharacter(country)}</button>
+                        alt="${country} Flag" class="flag d-none" id="${country}-flag">${uppercaseFirstCharacter(country)}</button>
             </div>`);
 
         //Country Information
@@ -135,31 +135,49 @@ const countriesMap = () => {
                 </div>
         </div>`
         );
+
+        let otherCountries = 
+
+        $(`#${country}`).click(function() {
+            if (($(this).children("img")).hasClass("active")) {
+                $(".country-btn").children("img").addClass("d-none").removeClass("active");
+                $(".information").addClass("d-none");
+                $("#map-container").addClass("d-none");
+            } else {
+            $(".country-btn").children("img").addClass("d-none");
+            $(".information").addClass("d-none");
+            $(`#${country}-flag`).removeClass("d-none").addClass("active");
+            $(`#${country}-info`).removeClass("d-none");
+            $("#map-container").removeClass("d-none");
+            }
+        })
     });
 }
 
+
 // When a Country selector is clicked
-const countrySelector = (function () {
-    $(".country-btn").click(function () {
+// const countrySelector = () => {
 
-        // Show/hide flags when country is selected
-        if ($(this).children("img").hasClass("d-none")) {
-            $(".country-btn").children("img").addClass("d-none");
-            $(this).children("img").removeClass("d-none");
-        } else {
+//     $(".country-btn").click(function () {
 
-            // $(".country-btn").children("img").addClass("d-none");
-        }
+//         // Show/hide flags when country is selected
+//         // if ($(this).children("img").hasClass("d-none")) {
+//         //     $(".country-btn").children("img").addClass("d-none");
+//         //     $(this).children("img").removeClass("d-none");
+//         // } else {
 
-        // Show information when country selected
-        var selectedCountry = `#${this.id}-info`;
-        $("#information-container").children(".information").addClass("d-none");
-        $(selectedCountry).removeClass("d-none").addClass("active");
+//         //     // $(".country-btn").children("img").addClass("d-none");
+//         // }
 
-        // show map when country selected
-        $("#map-container").removeClass("d-none");
-    });
-})
+//         // Show information when country selected
+//         var selectedCountry = `#${this.id}-info`;
+//         $("#information-container").children(".information").addClass("d-none");
+//         $(selectedCountry).removeClass("d-none").addClass("active");
+
+//         // show map when country selected
+//         $("#map-container").removeClass("d-none");
+//     });
+// }
 
 // code for function below found at https://stackoverflow.com/questions/18071046/smooth-scroll-to-specific-div-on-click/18071231
 // add smooth scroll when country is selected
@@ -172,10 +190,12 @@ const scrollTo = () => {
     })
 }
 
+
+
 $("document").ready(function () {
 
     countriesMap();
-    countrySelector();
+    // countrySelector();
     scrollTo();
 
 })
