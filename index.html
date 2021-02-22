@@ -16,7 +16,7 @@
 
 <body class="d-flex flex-column bg-color-white">
     <!------------------ nav bar ------------------>
-    <div class="hero-bg">
+    <header class="hero-bg">
         <nav class="navbar navbar-expand-lg navbar-dark">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,29 +43,46 @@
             </div>
         </div>
         <!------------------ country buttons ------------------>
-        <div class="country-selection">
+        <section class="country-selection">
             <div class="row text-center" id="countries">
             </div>
-        </div>
-    </div>
+        </section>
+    </header>
 
     <!------------------ map/info section ------------------>
 
-    <div id="information-container" class="row">
+    <section id="information-container" class="row">
         <div class="col-12 col-lg-5" id="country-info-container">
         </div>
         <div class="col-12 col-lg-7 d-none" id="map-container">
             <div class="hospitality-selectors">
-               
+
             </div>
             <div id="map">
             </div>
         </div>
-    </div>
+    </section>
 
 
     <!------------------ Flight pop-up ------------------>
+    <!------------------ contact form ------------------>
+    <!------------------ footer ------------------>
+    <section class="form-container stadium-bg">
+        <div class="fact-container">
+            <h2>Six Nations Facts</h2>
+            <div id="fact-1">
+                <p>The inside of the trophy was recently plated with gold to protect it from the corrosive properties of champagne.</p>
+            </div>
+            <div id="fact-2">
+                <p>The 6 Nations trophy is crafted from sterling silver, and has an estimated value of £55,000.</p>
+            </div>
+            <div id="fact-3">
+                <p>England has won the most Grand Slams with 12, Wales second with 10 and France third with 9 respectively.</p>
+            </div>
+        </div>
+        <form><input type="text"><input type="submit" value="Submit"></form>
 
+             
     <div id="flights-booking">
         <div class="skyscanner-widget" data-skyscanner-widget="FlightSearchWidget" data-locale="en-GB" data-market="GB"
             data-currency="GBP" data-multi-city-max-flights-number="0" data-colour=" #f9f9f9"
@@ -73,8 +90,14 @@
         </div>
         <script src="https://widgets.skyscanner.net/widget-server/js/loader.js" async></script>
     </div>
-    <!------------------ contact form ------------------>
-    <!------------------ footer ------------------>
+    </section>
+
+
+    <footer>
+   
+
+    </footer>
+
 
     <script src="https://code.jquery.com/jquery-3.5.1.js"
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>

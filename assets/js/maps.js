@@ -74,12 +74,12 @@ function createMarker(place) {
         title: place.name,
     });
 
-   // https://stackoverflow.com/questions/2223574/google-maps-auto-close-open-infowindows
+    // https://stackoverflow.com/questions/2223574/google-maps-auto-close-open-infowindows
     // close/open info window
     var infowindow = new google.maps.InfoWindow({
         content: place.name,
     });
- 
+
     marker.addListener("click", () => {
         if (prev_infowindow) {
             prev_infowindow.close();
@@ -87,7 +87,7 @@ function createMarker(place) {
         prev_infowindow = infowindow;
         infowindow.open(map, marker);
     });
-    
+
     markers.push(marker);
 }
 
@@ -115,15 +115,13 @@ const localHospitality = (hospitalityType) => {
 }
 
 
-
-
 $("document").ready(function () {
 
     // find local hospitality
     $("#hotels").on('click', function () {
         localHospitality(['lodging']);
     })
-    $("#restuarants").on('click', function () {
+    $("#restaurants").on('click', function () {
         localHospitality(['restaurant']);
     })
     $("#bars").on('click', function () {

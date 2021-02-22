@@ -10,8 +10,6 @@ const cityInfo = {
         addressLineThree: "TW2 7BA",
         travelLink: "https://www.twickenhamstadium.com/getting-here",
         ticketLink: "https://www.eticketing.co.uk/rfu/Events/Index",
-        latitude: "51.4560",
-        longitude: "-0.3415"
     },
     wales: {
         city: "Cardiff",
@@ -22,9 +20,7 @@ const cityInfo = {
         addressLineTwo: "Cardiff",
         addressLineThree: "CF10 1NS",
         travelLink: "https://www.principalitystadium.wales/information/about-the-venue/",
-        ticketLink: "https://www.eticketing.co.uk/principalitystadium/",
-        latitude: "51.4782",
-        longitude: "-3.1826"
+        ticketLink: "https://www.eticketing.co.uk/principalitystadium/"
     },
     scotland: {
         city: "Edinburgh",
@@ -35,10 +31,7 @@ const cityInfo = {
         addressLineTwo: "Edinburgh",
         addressLineThree: "EH12 5PJ",
         travelLink: "https://www.scottishrugby.org/tickets-and-events/getting-to-bt-murrayfield",
-        ticketLink: "https://www.scottishrugby.org/tickets-and-events/",
-        latitude: "55.9422",
-        longitude: "-3.2409"
-
+        ticketLink: "https://www.scottishrugby.org/tickets-and-events/"
     },
     ireland: {
         city: "Dublin",
@@ -49,9 +42,7 @@ const cityInfo = {
         addressLineTwo: "Ballsbridge",
         addressLineThree: "D04 K5F9",
         travelLink: "https://www.avivastadium.ie/getting-here",
-        ticketLink: "https://www.irishrugby.ie/ireland/tickets/",
-        latitude: "53.3352",
-        longitude: "-6.2285"
+        ticketLink: "https://www.irishrugby.ie/ireland/tickets/"
     },
     france: {
         city: "Paris",
@@ -62,9 +53,7 @@ const cityInfo = {
         addressLineTwo: "Saint-Denis",
         addressLineThree: "Paris",
         travelLink: "https://www.stadefrance.com/en/practical-information/how-to-get-there",
-        ticketLink: "https://www.stadefrance.com/en/tickets",
-        latitude: "48.9245",
-        longitude: "2.3602"
+        ticketLink: "https://www.stadefrance.com/en/tickets"
     },
     italy: {
         city: "Rome",
@@ -75,9 +64,7 @@ const cityInfo = {
         addressLineTwo: "00135",
         addressLineThree: "Roma",
         travelLink: "https://www.eventtravel.com/olympic-stadium-rome",
-        ticketLink: "https://ticket.federugby.it/",
-        latitude: "41.9341",
-        longitude: "12.4547"
+        ticketLink: "https://ticket.federugby.it/"
     }
 }
 const hospitality = ["hotels", "restaurants", "bars"]
@@ -112,7 +99,7 @@ const countriesMap = () => {
         //Country Information
         $("#country-info-container").append(
             `<div class="information d-none" id="${country}-info">
-            <div class="information-table">
+             <div class="information-table">
                 <h1>${uppercaseFirstCharacter(country)}</h1>
                 <table>
                     <tr>
@@ -174,40 +161,37 @@ const countriesMap = () => {
 
 const hospitalityMap = () => {
     hospitality.map((location) => {
+        // build map selectors
         $(".hospitality-selectors").append(
             `<button class="selector text-center" id="${location}" data-toggle="tooltip" data-placement="top"
                     title="${hospitalityObject[`${location}`]["name"]}"><i class="${hospitalityObject[`${location}`]["icon"]}"></i></button>`
-            )
+        )
     })
 }
-
-
-// code for function below found at https://stackoverflow.com/questions/18071046/smooth-scroll-to-specific-div-on-click/18071231
-// add smooth scroll when country is selected
-const scrollTo = () => {
-    $(".country-btn").click(function () {
-        $('html,body').animate({
-            scrollTop: $(".country-btn").offset().top - 50
-        },
-            'slow');
-    })
-}
-
 
 
 $("document").ready(function () {
 
     countriesMap();
     hospitalityMap();
-    scrollTo();
 
     $('[data-toggle="tooltip"]').tooltip();
 
+    // Add background color to dropdown menu
+    $(".navbar-toggler").click(function () {
+        $(".navbar").toggleClass("toggler-bg");
+    })
+
+    // code for function below found at https://stackoverflow.com/questions/18071046/smooth-scroll-to-specific-div-on-click/18071231
+    // add smooth scroll when country is selected
+    $(".country-btn").click(function () {
+        $('html,body').animate({
+            scrollTop: $(".country-btn").offset().top - 50
+        },
+            'slow');
+    })
 
 })
 
-// Add background color to dropdown menu
-$(".navbar-toggler").click(function () {
-    $(".navbar").toggleClass("toggler-bg");
-})
+
 
