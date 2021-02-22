@@ -80,6 +80,22 @@ const cityInfo = {
         longitude: "12.4547"
     }
 }
+const hospitality = ["hotels", "restaurants", "bars"]
+const hospitalityObject = {
+    hotels: {
+        name: "Hotels",
+        icon: "fas fa-bed"
+    },
+    restaurants: {
+        name: "Restaurants",
+        icon: "fas fa-utensils"
+    },
+    bars: {
+        name: "Pubs",
+        icon: "fas fa-beer"
+    }
+}
+
 const uppercaseFirstCharacter = (name) => {
     return name.charAt(0).toUpperCase() + name.slice(1)
 }
@@ -94,26 +110,26 @@ const countriesMap = () => {
             </div>`);
 
         //Country Information
-        $("#information-container").append(
-            `<div class="col-12 col-lg-5 order-1 information d-none" id="${country}-info">
+        $("#country-info-container").append(
+            `<div class="information d-none" id="${country}-info">
             <div class="information-table">
                 <h1>${uppercaseFirstCharacter(country)}</h1>
                 <table>
                     <tr>
                         <th>City:</th>
-                        <th>${cityInfo[`${country}`]["city"]}</th>
+                        <th class="pl-3">${cityInfo[`${country}`]["city"]}</th>
                     </tr>
                     <tr>
                         <td>Stadium:</td>
-                        <td>${cityInfo[`${country}`]["stadium"]}</td>
+                        <td class="pl-3">${cityInfo[`${country}`]["stadium"]}</td>
                     </tr>
                     <tr>
                         <td>Capacity:</td>
-                        <td>${cityInfo[`${country}`]["capacity"]}</td>
+                        <td class="pl-3">${cityInfo[`${country}`]["capacity"]}</td>
                     </tr>
                     <tr>
                         <td>Location:</td>
-                        <td><a href="${cityInfo[`${country}`]["locationLink"]}"
+                        <td class="pl-3"><a href="${cityInfo[`${country}`]["locationLink"]}"
                                 target="_blank">${cityInfo[`${country}`]["addressLineOne"]}<br>${cityInfo[`${country}`]["addressLineTwo"]}<br>${cityInfo[`${country}`]["addressLineThree"]}</a></td>
                     </tr>
                 </table>
@@ -136,23 +152,35 @@ const countriesMap = () => {
         </div>`
         );
 
-        let otherCountries = 
+        // Country Selector
+        $(`#${country}`).click(function () {
 
-        $(`#${country}`).click(function() {
             if (($(this).children("img")).hasClass("active")) {
+                // removes flag and info when clicked off
                 $(".country-btn").children("img").addClass("d-none").removeClass("active");
                 $(".information").addClass("d-none");
                 $("#map-container").addClass("d-none");
             } else {
-            $(".country-btn").children("img").addClass("d-none");
-            $(".information").addClass("d-none");
-            $(`#${country}-flag`).removeClass("d-none").addClass("active");
-            $(`#${country}-info`).removeClass("d-none");
-            $("#map-container").removeClass("d-none");
+                // replaces other country's info with selected country
+                $(".country-btn").children("img").addClass("d-none").removeClass("active");
+                $(".information").addClass("d-none");
+                $(`#${country}-flag`).removeClass("d-none").addClass("active");
+                $(`#${country}-info`).removeClass("d-none");
+                $("#map-container").removeClass("d-none");
             }
         })
     });
 }
+
+const hospitalityMap = () => {
+    hospitality.map((location) => {
+        $(".hospitality-selectors").append(
+            `<button class="selector text-center" id="${location}" data-toggle="tooltip" data-placement="top"
+                    title="${hospitalityObject[`${location}`]["name"]}"><i class="${hospitalityObject[`${location}`]["icon"]}"></i></button>`
+            )
+    })
+}
+
 
 // code for function below found at https://stackoverflow.com/questions/18071046/smooth-scroll-to-specific-div-on-click/18071231
 // add smooth scroll when country is selected
@@ -170,8 +198,11 @@ const scrollTo = () => {
 $("document").ready(function () {
 
     countriesMap();
-    // countrySelector();
+    hospitalityMap();
     scrollTo();
+
+    $('[data-toggle="tooltip"]').tooltip();
+
 
 })
 

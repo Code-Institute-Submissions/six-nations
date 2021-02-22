@@ -200,6 +200,10 @@ button.navbar-toggler {
 
 /* country information  */
 
+#information-container {
+    min-height: 300px;
+}
+
 .information {
     color: #f9f9f9;
 }
@@ -212,14 +216,6 @@ button.navbar-toggler {
 
 table td {
     vertical-align: top;
-}
-
-tr td:nth-child(2) {
-    padding-left: 15px;
-}
-
-tr th:nth-child(2) {
-    padding-left: 15px;
 }
 
 table td a {
@@ -271,11 +267,10 @@ table td a:hover {
     width: 90px;
     background-color: #23726c;
     display: inline-block;
-    border: 3px solid #00302b;
+    border: 3px solid #164945;
     margin: 0px 5px;
     font-size: 50px;
     color: #f9f9f9;
-    cursor: pointer;
 }
 
 
