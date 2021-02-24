@@ -170,25 +170,19 @@ const hospitalityMap = () => {
 }
 
 const factLoop = () => {
-    let factIds = [];
-    $("#facts").find("div").each(function () {
-        factIds.push("#" + this.id);
-    })
+    const facts = [
+    "The inside of the trophy was recently plated with gold to protect it from the corrosive properties of champagne.",
+    "The 6 Nations trophy is crafted from sterling silver, and has an estimated value of £55,000.",
+    "England has won the most Grand Slams with 12, Wales second with 10 and France third with 9 respectively."
+]
 
-    factIds.forEach((fact, i) => {
+    facts.forEach((fact, i) => {
         setTimeout(() => {
-            $(fact).fadeToggle();
-        }, i * 3000);
+            $("#facts").fadeOut(0, function () {
+                $("#facts").fadeIn(1000).html(fact);
+            });
+        }, i * 10000);
     });
-
-    // factIds.forEach(function(factId) {
-    // }
-
-    // collectIds();
-    // for (let i = 0; i < factIds.length; i++) {
-    //     $(`#${factIds[i]}`).show(5000).hide(5000);
-    // }
-
 }
 
 
