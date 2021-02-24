@@ -169,11 +169,35 @@ const hospitalityMap = () => {
     })
 }
 
+const factLoop = () => {
+    let factIds = [];
+    $("#facts").find("div").each(function () {
+        factIds.push("#" + this.id);
+    })
+
+    factIds.forEach((fact, i) => {
+        setTimeout(() => {
+            $(fact).fadeToggle();
+        }, i * 3000);
+    });
+
+    // factIds.forEach(function(factId) {
+    // }
+
+    // collectIds();
+    // for (let i = 0; i < factIds.length; i++) {
+    //     $(`#${factIds[i]}`).show(5000).hide(5000);
+    // }
+
+}
+
+
 
 $("document").ready(function () {
 
     countriesMap();
     hospitalityMap();
+    factLoop();
 
     $('[data-toggle="tooltip"]').tooltip();
 
@@ -195,3 +219,24 @@ $("document").ready(function () {
 
 
 
+
+
+
+
+
+
+// var factLoop = () => {
+//     for (let i, i > )
+// }
+
+
+//   $("#slideshow > div:gt(0)").hide();
+
+//     setInterval(function () {
+//         $('#slideshow > div:first')
+//             .fadeOut(500)
+//             .next()
+//             .fadeIn(500)
+//             .end()
+//             .appendTo('#slideshow');
+//     }, 3000);
