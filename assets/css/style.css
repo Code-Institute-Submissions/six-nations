@@ -283,7 +283,8 @@ table td a:hover {
     border-radius: 25px;
     margin: 60px auto;
     width: 66%;
-    height: 270px;
+    min-width: 250px;
+    height: 500px;
 }
 
 .fact-container h1 {
@@ -295,18 +296,23 @@ table td a:hover {
     font-size: 20px;
 }
 
-@media screen and (min-width: 768px) {
-    .fact-container h1 {
-        margin: 15px;
-    }
-
+@media screen and (min-width: 1024px) {
     .fact-container p {
         margin: 30px;
         font-size: 25px;
     }
 }
 
+@media screen and (min-width: 768px) {
+    .fact-container {
+        width: 66%;
+        height: 270px;
+    }
 
+    .fact-container p {
+        margin: 20px 10px;
+    }
+}
 
 
 

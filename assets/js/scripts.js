@@ -195,11 +195,9 @@ const facts = () => {
         $("#facts").fadeOut(1000, function () {
             $("#facts").fadeIn(1000).html(factsContent[factArrayIndex]);
         });
-
     }
     // Set Interval between facts 
-    setInterval(cycleFacts, 5000);
-
+    setInterval(cycleFacts, 7000);
 }
 
 
@@ -225,7 +223,6 @@ $("document").ready(function () {
         },
             'slow');
     })
-
 })
 
 
