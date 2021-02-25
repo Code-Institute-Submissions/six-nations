@@ -12,13 +12,18 @@ body {
 }
 
 h1,
-h2,
-h3,
-h4 {
+h2 {
     font-family: 'Anton', sans-serif;
     letter-spacing: 1px;
 }
 
+h1 {
+    font-size: 3.25em;
+}
+
+ h2 {
+    font-size: 2em;
+}
 
 .container-fluid {
     margin: 0;
@@ -91,14 +96,6 @@ button.navbar-toggler {
     height: 80vh;
 }
 
-.hero-callout h1 {
-    font-size: 3.25em;
-}
-
-.hero-callout h2 {
-    font-size: 2em;
-}
-
 @media screen and (min-width: 820px) {
     .hero-callout h1 {
         font-size: 5em;
@@ -166,10 +163,6 @@ button.navbar-toggler {
 }
 
 /* country information  */
-
-#information-container {
-    height: 300px;
-}
 
 #country-info-container {
     color: #f9f9f9;
@@ -276,35 +269,45 @@ table td a:hover {
     }
 }
 
-/* form section  */
+/* fact section  */
 
 .stadium-bg {
     min-height: 100vh;
     width: 100%;
     background: linear-gradient(rgb(0, 48, 43), rgba(0, 48, 43, 0.2)), url(../images/aviva-stadium.jpg) center center no-repeat;
     background-size: cover;
-    padding-top: 300px;
 }
 
-.form-container {
-    display: flex;
-    justify-content: center;
+.fact-container {
+    border: 3px solid #f9f9f9;
+    border-radius: 25px;
+    margin: 60px auto;
+    width: 66%;
+    height: 270px;
 }
 
-/* skyscanner widget */
-
-.flights-popup {
-    display: block;
-    left: 25%;
-    top: 10%;
+.fact-container h1 {
+    margin: 15px;
 }
 
-.skyscanner-widget {
-    width: 90%;
-    margin: 0 auto;
-    padding: 10px;
-    border-radius: 10px;
+.fact-container p {
+    margin: 20px 10px;
+    font-size: 20px;
 }
+
+@media screen and (min-width: 768px) {
+    .fact-container h1 {
+        margin: 15px;
+    }
+
+    .fact-container p {
+        margin: 30px;
+        font-size: 25px;
+    }
+}
+
+
+
 
 
 

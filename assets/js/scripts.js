@@ -100,7 +100,7 @@ const countriesMap = () => {
         $("#country-info-container").append(
             `<div class="information d-none" id="${country}-info">
              <div class="information-table">
-                <h1>${uppercaseFirstCharacter(country)}</h1>
+                <h2>${uppercaseFirstCharacter(country)}</h2>
                 <table>
                     <tr>
                         <th>City:</th>
@@ -169,20 +169,37 @@ const hospitalityMap = () => {
     })
 }
 
-const factLoop = () => {
-    const facts = [
-    "The inside of the trophy was recently plated with gold to protect it from the corrosive properties of champagne.",
-    "The 6 Nations trophy is crafted from sterling silver, and has an estimated value of £55,000.",
-    "England has won the most Grand Slams with 12, Wales second with 10 and France third with 9 respectively."
-]
+const facts = () => {
+    const factsContent = [
+        "The inside of the trophy was recently plated with gold to protect it from the corrosive properties of champagne. They even added a lip to aid drinking from it!",
+        "The 6 Nations trophy is crafted from sterling silver, and has an estimated value of £55,000.",
+        "England has won the most Grand Slams with 12, Wales second with 10 and France third with 9 respectively.",
+        "Irelands Ronan O’Gara is the tournaments highest points scorer with 551 points while teammate Brian O’Driscoll is the highest try scorer with 25.",  
+        "The 1977 Grand Slam-winning France team did not concede a try in their four matches.",   
+        "Twickenham stadium will sell around 160,547 pints each match.",
+        "The most points ever scored in one game is 80 by England against Italy in 2001."
+    ]
 
-    facts.forEach((fact, i) => {
-        setTimeout(() => {
-            $("#facts").fadeOut(0, function () {
-                $("#facts").fadeIn(1000).html(fact);
-            });
-        }, i * 10000);
-    });
+    // Start cycle with last fact 
+    $("#facts").html(factsContent[factsContent.length -1]);
+
+    var factArrayIndex = -1;
+
+    // Cycle through facts using a counter 
+    var cycleFacts = () => {
+        ++factArrayIndex;
+        if (factArrayIndex >= factsContent.length) {
+            factArrayIndex = 0;
+        }
+        // Add facts to html 
+        $("#facts").fadeOut(1000, function () {
+            $("#facts").fadeIn(1000).html(factsContent[factArrayIndex]);
+        });
+
+    }
+    // Set Interval between facts 
+    setInterval(cycleFacts, 5000);
+
 }
 
 
@@ -191,7 +208,7 @@ $("document").ready(function () {
 
     countriesMap();
     hospitalityMap();
-    factLoop();
+    facts();
 
     $('[data-toggle="tooltip"]').tooltip();
 
@@ -200,7 +217,7 @@ $("document").ready(function () {
         $(".navbar").toggleClass("toggler-bg");
     })
 
-    // code for function below found at https://stackoverflow.com/questions/18071046/smooth-scroll-to-specific-div-on-click/18071231
+    // https://stackoverflow.com/questions/18071046/smooth-scroll-to-specific-div-on-click/18071231
     // add smooth scroll when country is selected
     $(".country-btn").click(function () {
         $('html,body').animate({
