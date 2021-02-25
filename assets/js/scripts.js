@@ -180,7 +180,7 @@ const facts = () => {
         "The most points ever scored in one game is 80 by England against Italy in 2001."
     ]
 
-    // Start cycle with last fact 
+    // Display last fact when page loads
     $("#facts").html(factsContent[factsContent.length -1]);
 
     var factArrayIndex = -1;
@@ -197,7 +197,7 @@ const facts = () => {
         });
     }
     // Set Interval between facts 
-    setInterval(cycleFacts, 7000);
+    setInterval(cycleFacts, 9000);
 }
 
 

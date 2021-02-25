@@ -255,12 +255,16 @@ table td a:hover {
 
 .selector {
     width: 90px;
-    background-color: #23726c;
-    display: inline-block;
-    border: 3px solid #164945;
+    background: rgb(249,249,249);
+    background: linear-gradient(150deg, rgba(249,249,249,1) 28%, rgba(65,64,66,1) 100%);
+     display: inline-block;
     margin: 0px 5px;
     font-size: 50px;
-    color: #f9f9f9;
+    color: #00302b;
+}
+
+.selector:hover {
+    color: rgba(0, 48, 43, 0.5);
 }
 
 @media screen and (min-width: 768px) {
@@ -282,8 +286,7 @@ table td a:hover {
     border: 3px solid #f9f9f9;
     border-radius: 25px;
     margin: 60px auto;
-    width: 66%;
-    min-width: 275px;
+    width: 275px;
     height: 500px;
 }
 
@@ -292,25 +295,31 @@ table td a:hover {
 }
 
 .fact-container p {
-    margin: 20px 10px;
+    margin: 20px;
     font-size: 20px;
 }
 
-@media screen and (min-width: 1024px) {
-    .fact-container p {
-        margin: 30px;
-        font-size: 25px;
+.fact-paragraph {
+    height: 50%;
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (min-width: 540px) {
+    .fact-container {
+        width: 480px;
+        height: 240px;
     }
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 1024px) {
     .fact-container {
-        width: 66%;
+        width: 650px;
         height: 270px;
     }
 
     .fact-container p {
-        margin: 20px 10px;
+        font-size: 25px;
     }
 }
 
