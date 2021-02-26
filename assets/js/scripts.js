@@ -78,7 +78,7 @@ const hospitalityObject = {
         icon: "fas fa-utensils"
     },
     bars: {
-        name: "Pubs",
+        name: "Bars",
         icon: "fas fa-beer"
     }
 }
@@ -125,7 +125,7 @@ const countriesMap = () => {
                 <a href="${cityInfo[`${country}`]["travelLink"]}" target="_blank" class="travel-link">Click
                     here for travel information</a>
                       </div>
-                <div class="row no-gutters">
+                <div class="row">
                     <div class="col">
                         <button class="small-btn">
                             <a href="${cityInfo[`${country}`]["ticketLink"]}" target="_blank"
@@ -139,7 +139,7 @@ const countriesMap = () => {
         </div>`
         );
 
-        // Country Selector
+        // Country Selector click function
         $(`#${country}`).click(function () {
 
             if (($(this).children("img")).hasClass("active")) {

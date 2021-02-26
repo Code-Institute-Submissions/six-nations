@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
 
 /* Colors  
 white - #f9f9f9
@@ -12,7 +13,8 @@ body {
 }
 
 h1,
-h2 {
+h2,
+h3 {
     font-family: 'Anton', sans-serif;
     letter-spacing: 1px;
 }
@@ -21,9 +23,14 @@ h1 {
     font-size: 3.25em;
 }
 
- h2 {
+h2 {
     font-size: 2em;
 }
+
+h3 {
+    font-size: 1.5em;
+}
+
 
 .container-fluid {
     margin: 0;
@@ -31,6 +38,10 @@ h1 {
 
 .row {
     margin: 0;
+}
+
+.col {
+    padding: 0px;
 }
 
 /* background-colors  */
@@ -168,6 +179,7 @@ button.navbar-toggler {
     color: #f9f9f9;
     display: flex;
     justify-content: center;
+    padding: 30px 10px;
 }
 
 .information-table {
@@ -208,8 +220,7 @@ table td a:hover {
     width: 33%;
     height: 50px;
     min-width: 200px;
-    margin: 10px auto;
-    padding: 5px;
+    margin: 20px auto;
     font-weight: 800;
     font-size: 100%;
 }
@@ -219,6 +230,7 @@ table td a:hover {
 }
 
 .small-btn a {
+    width: 100%;
     font-weight: 800;
     font-size: 100%;
     color: #00302b;
@@ -226,12 +238,10 @@ table td a:hover {
 }
 
 @media screen and (min-width: 800px) {
-    .information {
-        padding: 30px;
-    }
     .small-btn {
         display: inline;
-        margin: 10px;
+        margin-top: 20px;
+        margin-right: 10px;
     }
     .information-table {
         font-size: 25px;
@@ -247,20 +257,31 @@ table td a:hover {
     margin-right: auto;
 }
 
+#map-container h3 {
+    margin: 30px 10px;
+    display: block;
+}
+
 .hospitality-selectors{
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: 10px;
 }
 
 .selector {
-    width: 90px;
-    background: rgb(249,249,249);
-    background: linear-gradient(150deg, rgba(249,249,249,1) 28%, rgba(65,64,66,1) 100%);
-     display: inline-block;
+    width: 75px;
+    height: 75px;
+    border-radius: 15px;
+    display: inline-block;
     margin: 0px 5px;
-    font-size: 50px;
-    color: #00302b;
+    font-size: 30px;
+    color: #ea4336;
+    background-color: #f9f9f9;
+}
+
+.fa-beer {
+    margin-left: 3px;
 }
 
 .selector:hover {
@@ -296,11 +317,12 @@ table td a:hover {
 
 .fact-container p {
     margin: 20px;
-    font-size: 20px;
+    font-size: 23px;
+    font-family: 'Kalam', cursive;
 }
 
 .fact-paragraph {
-    height: 50%;
+    height: 60%;
     display: flex;
     align-items: center;
 }
@@ -319,7 +341,7 @@ table td a:hover {
     }
 
     .fact-container p {
-        font-size: 25px;
+        font-size: 28px;
     }
 }
 
