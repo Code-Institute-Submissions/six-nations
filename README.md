@@ -30,7 +30,7 @@ The site's main goal is to provide the user with information and for the user to
 
 ### Typography
 
-The site uses two main fonts; [Anton](https://fonts.google.com/specimen/Anton?preview.text_type=custom) and [Poppins](https://fonts.google.com/specimen/Poppins?preview.text_type=custom), both taken from the Google Fonts library. Anton is used for the main text of the website as it is clear and easy to read and I have used Poppins for the headings as it is a bold, strong font. The other font I have used briefly on the site is [Kalam](https://fonts.google.com/specimen/Kalam?preview.text_type=custom) which appears in the fact box below the map section. This has a more conversational feel and look to it, visually seperating the fact box from the city guide information. 
+The site uses two main fonts; [Anton](https://fonts.google.com/specimen/Anton?preview.text_type=custom) and [Poppins](https://fonts.google.com/specimen/Poppins?preview.text_type=custom), both taken from the Google Fonts library. Anton is used for the main text of the website as it is clear and easy to read and I have used Poppins for the headings as it is a bold, strong font. The other font I have used briefly on the site is [Kalam](https://fonts.google.com/specimen/Kalam?preview.text_type=custom) which appears for the tagline and in the fact box below the map section. This has a more conversational feel and look to it, visually seperating the fact box from the city guide information.
 
 ### Imagery 
 
