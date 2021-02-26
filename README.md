@@ -26,11 +26,11 @@ This website is designed to help sports fans travelling to Six Nations rugby gam
 The site's main goal is to provide the user with information and for the user to be able to access the information quickly. I have kept this in mind when designing the site. 
 
 ### Color Scheme
- The main color throughout the site is green (mainly [#00302b](https://www.google.com/search?q=%2300302b&oq=%2300302b&aqs=chrome.0.69i59.4496j0j9&sourceid=chrome&ie=UTF-8)) as this has connotations to a field and sports pitch. This has been complemented by a dark background and white text for easy reading and to ensure the text and information stands out on the page. I have kept the color scheme quite simple as I will use flags and a Google Map on the site, which will bring a lot of color to the site. 
+ The main color throughout the site is green (Hex code: [#00302b](https://www.google.com/search?q=%2300302b&oq=%2300302b&aqs=chrome.0.69i59.4496j0j9&sourceid=chrome&ie=UTF-8)) as this has connotations to a field and sports pitch. This has been used mainly to give a dark background against the white text for easy reading and to ensure the text and information stands out on the page. I have kept the color scheme quite simple as I will use flags and a Google Map on the site, which will bring a lot of color to the site. I have red colored icons above the map to visually link the icons to the markers that appear on the map. 
 
 ### Typography
 
-The site uses two main fonts; [Anton](https://fonts.google.com/specimen/Anton?preview.text_type=custom) and [Poppins](https://fonts.google.com/specimen/Poppins?preview.text_type=custom), both taken from the Google Fonts library. Anton is used for the main text of the website as it is clear and easy to read where I have used Poppins for the headings as it is a bold, strong font. 
+The site uses two main fonts; [Anton](https://fonts.google.com/specimen/Anton?preview.text_type=custom) and [Poppins](https://fonts.google.com/specimen/Poppins?preview.text_type=custom), both taken from the Google Fonts library. Anton is used for the main text of the website as it is clear and easy to read and I have used Poppins for the headings as it is a bold, strong font. The other font I have used briefly on the site is [Kalam](https://fonts.google.com/specimen/Kalam?preview.text_type=custom) which appears in the fact box below the map section. This has a more conversational feel and look to it, visually seperating the fact box from the city guide information. 
 
 ### Imagery 
 

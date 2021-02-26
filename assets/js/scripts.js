@@ -132,7 +132,7 @@ const countriesMap = () => {
                                 class="btn-hover">Matchday Tickets</a>
                         </button>
                         <button class="btn small-btn">
-                            <a href="#flights-booking" class="btn-hover">Book Flight</a>
+                            <a href="#flights-booking" class="btn-hover">Book Flights</a>
                         </button>
                     </div>
                 </div>
