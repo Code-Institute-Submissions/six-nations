@@ -219,9 +219,9 @@ table td a:hover {
     border-radius: 15px;
     display: block;
     width: 33%;
-    height: 50px;
     min-width: 200px;
     margin: 20px auto;
+    padding: 10px 0px;
     font-weight: 800;
     font-size: 100%;
 }
@@ -231,9 +231,7 @@ table td a:hover {
 }
 
 .small-btn a {
-    width: 100%;
     font-weight: 800;
-    font-size: 100%;
     color: #00302b;
     text-decoration: none;
 }
@@ -351,33 +349,22 @@ table td a:hover {
 /* footer  */
 
 footer {
-    padding: 15px 30px;
+    padding: 20px 30px;
     background-color: rgba(0, 48, 43, 0.7);
 }
-
-.newsletter 
 
 .signup input {
     border-radius: 15px;
     border: none;
+    outline: none;
+    padding: 0px 15px;
 }
 
-.signup input:active {
-    border: none;
-}
-
-.site-owner {
-    margin-top: 15px;
-}
-
-.site-owner a {
-    color: #f9f9f9;
-    
-}
-
-.site-owner a:hover {
-    color: #999999;
-    text-decoration: none;
+.team-social img {
+    height: 40px;
+    width: 60px;
+    margin: 5px;
+    border-radius: 15px;
 }
 
 

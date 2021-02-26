@@ -9,7 +9,7 @@ const cityInfo = {
         addressLineTwo: "Twickenham",
         addressLineThree: "TW2 7BA",
         travelLink: "https://www.twickenhamstadium.com/getting-here",
-        ticketLink: "https://www.eticketing.co.uk/rfu/Events/Index",
+        ticketLink: "https://www.eticketing.co.uk/rfu/Events/Index"
     },
     wales: {
         city: "Cardiff",
@@ -131,8 +131,8 @@ const countriesMap = () => {
                             <a href="${cityInfo[`${country}`]["ticketLink"]}" target="_blank"
                                 class="btn-hover">Matchday Tickets</a>
                         </button>
-                        <button class="btn small-btn">
-                            <a href="#flights-booking" class="btn-hover">Book Flights</a>
+                        <button class="small-btn">
+                            <a href="https://www.skyscanner.net/" target="_blank" class="btn-hover">Book Flights</a>
                         </button>
                     </div>
                 </div>
