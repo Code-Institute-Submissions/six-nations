@@ -360,12 +360,26 @@ footer {
     padding: 0px 15px;
 }
 
-.team-social img {
-    height: 40px;
-    width: 60px;
-    margin: 5px;
-    border-radius: 15px;
+.socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+.socials a {
+    height: 60px;
+    width: 60px;
+    margin: 0px 60px;
+    font-size: 2.5em;
+    color: #00302b;
+    background-color: #f9f9f9;
+    border-radius: 50px;
+}
+
+
+.socials a:hover {
+    color: #f9f9f9;
+    background: none;
+}
 
 
