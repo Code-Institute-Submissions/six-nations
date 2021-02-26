@@ -271,13 +271,14 @@ table td a:hover {
 
 .selector {
     width: 75px;
-    height: 75px;
     border-radius: 15px;
     display: inline-block;
     margin: 0px 5px;
+    padding: 10px 0px;
     font-size: 30px;
     color: #ea4336;
-    background-color: #f9f9f9;
+    background: rgb(249,249,249);
+    background: linear-gradient(150deg, rgba(249,249,249,1) 28%, rgba(65,64,66,1) 100%);
 }
 
 .fa-beer {
