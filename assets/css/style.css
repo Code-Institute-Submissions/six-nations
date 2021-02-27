@@ -377,30 +377,38 @@ footer {
     font-weight: 800;
 }
 
+.submit-btn:hover {
+    color: rgba(0, 48, 43, 0.5);
+}
+
 .fa-check-circle {
     font-size: 125%;   
 }
 
-.socials {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.social-container {
+    margin: 20px 0px;
 }
 
-.socials a {
-    height: 60px;
+.socials {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.social-icon {
     width: 60px;
-    margin: 0px 60px;
-    font-size: 2.5em;
-    color: #00302b;
     background-color: #f9f9f9;
     border-radius: 50px;
 }
 
+.socials a {
+    font-size: 2.5em;
+    color: #00302b;
+}
+
 
 .socials a:hover {
-    color: #f9f9f9;
-    background: none;
+    color: rgba(0, 48, 43, 0.5);
 }
 
 

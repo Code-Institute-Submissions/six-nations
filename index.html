@@ -35,7 +35,7 @@
                         <a class="nav-link" href="#countries">Choose a Country</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Sign Up</a>
+                        <a class="nav-link" href="#footer">Sign Up</a>
                     </li>
                 </ul>
             </div>
@@ -79,7 +79,7 @@
                 <p id="facts"></p>
             </div>
         </article>
-        <footer>
+        <footer id="footer">
             <div class="row">
                 <div class="newsletter col-12 col-lg-6 text-center">
                     <h2 class="">Newsletter</h2>
@@ -99,19 +99,28 @@
                             <option>Wales</option>
                         </select>
                         <div class="submit">
-                            <input class="submit-btn" type="submit" value="Submit">
+                            <input class="submit-btn" type="submit" value="Submit" onclick="validateEmail(email)">
                             <i class="fas fa-check-circle invisible" id="confirm"></i>
                             <i class="fas fa-exclamation-circle d-none" id="error"> Please try again</i>
                         </div>
                     </form>
                 </div>
-                <div class="col-12 col-lg-6 text-center socials">
-                    <a href="https://www.facebook.com/sixnationsrugby/" target="_blank"><i
-                            class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/sixnationsrugby/?hl=en" target="_blank"><i
-                            class="fab fa-instagram"></i></a>
-                    <a href="https://twitter.com/SixNationsRugby?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
-                        target="_blank"><i class="fab fa-twitter"></i></a>
+                <div class="col-12 col-lg-6 text-center social-container">
+                    <h2>Follow the Official Six Nations pages</h2>
+                    <div class="socials">
+                        <div class="social-icon">
+                            <a href="https://www.facebook.com/sixnationsrugby/" target="_blank"><i
+                                    class="fab fa-facebook-f"></i></a>
+                        </div>
+                        <div class="social-icon">
+                            <a href="https://www.instagram.com/sixnationsrugby/?hl=en" target="_blank"><i
+                                    class="fab fa-instagram"></i></a>
+                        </div>
+                        <div class="social-icon">
+                            <a href="https://twitter.com/SixNationsRugby?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+                                target="_blank"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </footer>

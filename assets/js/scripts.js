@@ -224,27 +224,3 @@ $("document").ready(function () {
             'slow');
     })
 })
-
-
-
-
-
-
-
-
-
-// var factLoop = () => {
-//     for (let i, i > )
-// }
-
-
-//   $("#slideshow > div:gt(0)").hide();
-
-//     setInterval(function () {
-//         $('#slideshow > div:first')
-//             .fadeOut(500)
-//             .next()
-//             .fadeIn(500)
-//             .end()
-//             .appendTo('#slideshow');
-//     }, 3000);
