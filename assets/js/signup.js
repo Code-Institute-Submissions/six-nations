@@ -19,3 +19,13 @@ function sendMail(signupForm){
         return false;
 }
 
+// https://www.w3resource.com/javascript/form/email-validation.php
+// function validateEmail(email) 
+// {
+//  if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email))
+//   {
+//     return (true)
+//   }
+//     alert("You have entered an invalid email address! Please try again.")
+//     return (false)
+// }
