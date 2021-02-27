@@ -353,11 +353,32 @@ footer {
     background-color: rgba(0, 48, 43, 0.7);
 }
 
-.signup input {
+.newsletter {
+    margin: 20px 0px;
+}
+
+.signup input, 
+.signup select {
     border-radius: 15px;
     border: none;
     outline: none;
     padding: 0px 15px;
+    margin: 15px auto;
+    width: 66%;
+    display: block;
+    height: 30px;
+    color: #00302b;
+}
+
+.submit-btn {
+    background: rgb(249,249,249);
+    background: linear-gradient(150deg, rgba(249,249,249,1) 28%, rgba(65,64,66,1) 100%);
+    color: #00302b;
+    font-weight: 800;
+}
+
+.fa-check-circle {
+    font-size: 125%;   
 }
 
 .socials {
@@ -382,4 +403,18 @@ footer {
     background: none;
 }
 
+
+@media screen and (min-width: 768px) {
+    .signup input, 
+    .signup select {
+        border-radius: 15px;
+        border: none;
+        outline: none;
+        padding: 0px 15px;
+        margin-bottom: 5px;
+        width: 33%;
+        display: inline;
+        height: 30px;
+    }
+}
 
