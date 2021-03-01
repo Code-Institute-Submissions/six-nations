@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="Description" content="Enter your description here" />
+    <link rel="shortcut icon" href="assets/images/rugby-ball.jpg">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
@@ -84,9 +85,9 @@
                 <div class="newsletter col-12 col-lg-6 text-center">
                     <h2 class="">Newsletter</h2>
                     <p class="">For the latest Six Nations' updates, sign up to our newsletter</p>
-                    <form class="signup" onsubmit="return sendMail(this);">
+                    <form class="signup" id="signup-form" onsubmit="return sendMail(this);">
                         <label class="sr-only" for="email">Email</label>
-                        <input type="text" name="email" id="email" aria-describedby="email" placeholder="Email Address"
+                        <input type="email" name="email" id="email" aria-describedby="email" placeholder="Email Address"
                             required>
                         <label class="sr-only" for="homeTeam">Choose your team</label>
                         <select id="homeTeam" class="form-control" name="homeTeam">
@@ -99,7 +100,7 @@
                             <option>Wales</option>
                         </select>
                         <div class="submit">
-                            <input class="submit-btn" type="submit" value="Submit" onclick="validateEmail(email)">
+                            <input class="submit-btn" type="submit" value="Submit">
                             <i class="fas fa-check-circle invisible" id="confirm"></i>
                             <i class="fas fa-exclamation-circle d-none" id="error"> Please try again</i>
                         </div>
