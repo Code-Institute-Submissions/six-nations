@@ -1,4 +1,4 @@
-const countries = ["england", "wales", "scotland", "ireland", "france", "italy"]
+const countries = ["england", "wales", "scotland", "ireland", "france", "italy"];
 const cityInfo = {
     england: {
         city: "London",
@@ -66,8 +66,8 @@ const cityInfo = {
         travelLink: "https://www.eventtravel.com/olympic-stadium-rome",
         ticketLink: "https://ticket.federugby.it/"
     }
-}
-const hospitality = ["hotels", "restaurants", "bars"]
+};
+const hospitality = ["hotels", "restaurants", "bars"];
 const hospitalityObject = {
     hotels: {
         name: "Hotels",
@@ -81,15 +81,15 @@ const hospitalityObject = {
         name: "Bars",
         icon: "fas fa-beer"
     }
-}
+};
 
 // Capitalise first character of string
-const uppercaseFirstCharacter = (name) => {
-    return name.charAt(0).toUpperCase() + name.slice(1)
-}
+const uppercaseFirstCharacter = (function(name) {
+    return name.charAt(0).toUpperCase() + name.slice(1);
+});
 
-const countriesMap = () => {
-    countries.map((country) => {
+const countriesMap = (function(){
+    countries.map(function(country){
         //Build buttons
         $("#countries").append(
             `<div class="col-4 col-sm-2 country-btn-container">
@@ -105,31 +105,31 @@ const countriesMap = () => {
                 <table>
                     <tr>
                         <th>City:</th>
-                        <th class="pl-3">${cityInfo[`${country}`]["city"]}</th>
+                        <th class="pl-3">${cityInfo[`${country}`].city}</th>
                     </tr>
                     <tr>
                         <td>Stadium:</td>
-                        <td class="pl-3">${cityInfo[`${country}`]["stadium"]}</td>
+                        <td class="pl-3">${cityInfo[`${country}`].stadium}</td>
                     </tr>
                     <tr>
                         <td>Capacity:</td>
-                        <td class="pl-3">${cityInfo[`${country}`]["capacity"]}</td>
+                        <td class="pl-3">${cityInfo[`${country}`].capacity}</td>
                     </tr>
                     <tr>
                         <td>Location:</td>
-                        <td class="pl-3"><a href="${cityInfo[`${country}`]["locationLink"]}"
-                                target="_blank">${cityInfo[`${country}`]["addressLineOne"]}<br>${cityInfo[`${country}`]["addressLineTwo"]}<br>${cityInfo[`${country}`]["addressLineThree"]}</a></td>
+                        <td class="pl-3"><a href="${cityInfo[`${country}`].locationLink}"
+                                target="_blank">${cityInfo[`${country}`].addressLineOne}<br>${cityInfo[`${country}`].addressLineTwo}<br>${cityInfo[`${country}`].addressLineThree}</a></td>
                     </tr>
                 </table>
               
                 <br>
-                <a href="${cityInfo[`${country}`]["travelLink"]}" target="_blank" class="travel-link">Click
+                <a href="${cityInfo[`${country}`].travelLink}" target="_blank" class="travel-link">Click
                     here for travel information</a>
                       </div>
                 <div class="row">
                     <div class="col">
                         <button class="small-btn">
-                            <a href="${cityInfo[`${country}`]["ticketLink"]}" target="_blank"
+                            <a href="${cityInfo[`${country}`].ticketLink}" target="_blank"
                                 class="btn-hover">Matchday Tickets</a>
                         </button>
                         <button class="small-btn">
@@ -156,11 +156,11 @@ const countriesMap = () => {
                 $(`#${country}-info`).removeClass("d-none");
                 $("#map-container").removeClass("d-none");
             }
-        })
+        });
     });
-}
+});
 
-const hospitalityMap = () => {
+const hospitalityMap = (function() {
     hospitality.map((location) => {
         // build map selectors
         $(".hospitality-selectors").append(
@@ -168,9 +168,9 @@ const hospitalityMap = () => {
                     title="${hospitalityObject[`${location}`]["name"]}"><i class="${hospitalityObject[`${location}`]["icon"]}"></i></button>`
         )
     })
-}
+})
 
-const facts = () => {
+const facts = (function() {
     const factsContent = [
         "The inside of the trophy was recently plated with gold to protect it from the corrosive properties of champagne. They even added a lip to aid drinking from it!",
         "The 6 Nations trophy is crafted from sterling silver, and has an estimated value of £55,000.",
@@ -199,7 +199,7 @@ const facts = () => {
     }
     // Set Interval between facts 
     setInterval(cycleFacts, 9000);
-}
+})
 
 
 
