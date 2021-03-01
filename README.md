@@ -99,8 +99,11 @@ Some changes were made to the design of the site after completion of the wirefra
 
 
 
+Testing
 
-
+HTML Validator
+CSS Validator
+[Javascript Validator](https://beautifytools.com/javascript-validator.php) 
 
 
 

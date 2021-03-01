@@ -26,7 +26,7 @@ const locations = {
         latitude: "41.9341",
         longitude: "12.4547"
     }
-}
+};
 
 function initMap() {
     map = new google.maps.Map(document.getElementById("map"), {
@@ -50,7 +50,7 @@ function newLocation(newLat, newLng) {
     var marker = new google.maps.Marker({
         position: { lat: newLat, lng: newLng },
         map: map
-    })
+    });
     markers.push(marker);
 }
 
@@ -80,13 +80,14 @@ function createMarker(place) {
         content: place.name,
     });
 
-    marker.addListener("click", () => {
+    marker.addListener("click", function(){
         if (prev_infowindow) {
             prev_infowindow.close();
         }
         prev_infowindow = infowindow;
         infowindow.open(map, marker);
     });
+    
 
     markers.push(marker);
 }
@@ -94,7 +95,7 @@ function createMarker(place) {
 
 // https://developers.google.com/maps/documentation/javascript/places#place_search_requests
 // function to find local hospitality
-const localHospitality = (hospitalityType) => {
+function localHospitality(hospitalityType) {
     var request = {
         type: hospitalityType,
         location: map.getCenter(),
@@ -112,7 +113,7 @@ const localHospitality = (hospitalityType) => {
             }
         }
     }
-}
+};
 
 
 $("document").ready(function () {
@@ -120,13 +121,13 @@ $("document").ready(function () {
     // find local hospitality
     $("#hotels").on('click', function () {
         localHospitality(['lodging']);
-    })
+    });
     $("#restaurants").on('click', function () {
         localHospitality(['restaurant']);
-    })
+    });
     $("#bars").on('click', function () {
         localHospitality(['bar']);
-    })
+    });
 
     // change center of map
     $("#england").on('click', function () {
@@ -154,5 +155,5 @@ $("document").ready(function () {
         newLocation(41.9341, 12.4547);
     });
 
-})
+});
 

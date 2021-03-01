@@ -84,11 +84,11 @@ const hospitalityObject = {
 };
 
 // Capitalise first character of string
-const uppercaseFirstCharacter = (function(name) {
+function uppercaseFirstCharacter(name) {
     return name.charAt(0).toUpperCase() + name.slice(1);
-});
+};
 
-const countriesMap = (function(){
+function countriesMap(){
     countries.map(function(country){
         //Build buttons
         $("#countries").append(
@@ -158,19 +158,19 @@ const countriesMap = (function(){
             }
         });
     });
-});
+};
 
-const hospitalityMap = (function() {
+function hospitalityMap() {
     hospitality.map((location) => {
         // build map selectors
         $(".hospitality-selectors").append(
             `<button class="selector text-center" id="${location}" data-toggle="tooltip" data-placement="top"
-                    title="${hospitalityObject[`${location}`]["name"]}"><i class="${hospitalityObject[`${location}`]["icon"]}"></i></button>`
-        )
-    })
-})
+                    title="${hospitalityObject[`${location}`].name}"><i class="${hospitalityObject[`${location}`].icon}"></i></button>`
+        );
+    });
+};
 
-const facts = (function() {
+function facts() {
     const factsContent = [
         "The inside of the trophy was recently plated with gold to protect it from the corrosive properties of champagne. They even added a lip to aid drinking from it!",
         "The 6 Nations trophy is crafted from sterling silver, and has an estimated value of £55,000.",
@@ -179,7 +179,7 @@ const facts = (function() {
         "The 1977 Grand Slam-winning France team did not concede a try in their four matches.",
         "Twickenham stadium will sell around 160,547 pints each match.",
         "The most points ever scored in one game is 80 by England against Italy in 2001."
-    ]
+    ];
 
     // Display last fact when page loads
     $("#facts").html(factsContent[factsContent.length - 1]);
@@ -187,7 +187,7 @@ const facts = (function() {
     var factArrayIndex = -1;
 
     // Cycle through facts using a counter 
-    var cycleFacts = () => {
+    function cycleFacts() {
         ++factArrayIndex;
         if (factArrayIndex >= factsContent.length) {
             factArrayIndex = 0;
@@ -196,10 +196,10 @@ const facts = (function() {
         $("#facts").fadeOut(1000, function () {
             $("#facts").fadeIn(1000).html(factsContent[factArrayIndex]);
         });
-    }
+    };
     // Set Interval between facts 
     setInterval(cycleFacts, 9000);
-})
+};
 
 
 
@@ -214,7 +214,7 @@ $("document").ready(function () {
     // Add background color to dropdown menu
     $(".navbar-toggler").click(function () {
         $(".navbar").toggleClass("toggler-bg");
-    })
+    });
 
     // if facts are out of view when country selected, the window will scroll down 
     $(".country-btn").click(function () {
@@ -223,6 +223,6 @@ $("document").ready(function () {
                 scrollTop: $(".country-btn").offset().top - 50
             },
             500);
-        };
+        }
     });
-})
+});
