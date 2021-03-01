@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="Description" content="Enter your description here" />
-    <link rel="shortcut icon" href="assets/images/rugby-ball.jpg">
+    <link rel="shortcut icon" href="assets/images/rugby-ball.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
@@ -22,8 +22,10 @@
     <title>The Six Nations City Guide</title>
 </head>
 
-<body class="d-flex flex-column bg-color-white">
-    <!------------------ nav bar ------------------>
+<body class="d-flex flex-column bg-color-green">
+
+    <!-- nav bar -->
+
     <header class="hero-bg">
         <nav class="navbar navbar-expand-lg navbar-dark">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -48,14 +50,16 @@
                 <h3>Information for any Away Day!</h3>
             </div>
         </div>
-        <!------------------ country buttons ------------------>
+
+        <!-- country selectors -->
+
         <section class="country-selection">
             <div class="row text-center" id="countries">
             </div>
         </section>
     </header>
 
-    <!------------------ map/info section ------------------>
+    <!-- map/info section -->
 
     <section id="information-container" class="row">
         <div class="col-12 col-lg-5" id="country-info-container">
@@ -135,8 +139,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
         crossorigin="anonymous"></script>
-    <script
-        src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
     <script async
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDiU-4SGajh434aZMG42PMA-4V7SDyjB2A&libraries=places&callback=initMap">
         </script>
