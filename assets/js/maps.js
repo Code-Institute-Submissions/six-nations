@@ -113,7 +113,7 @@ function localHospitality(hospitalityType) {
             }
         }
     }
-};
+}
 
 
 $("document").ready(function () {

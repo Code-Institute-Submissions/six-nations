@@ -312,7 +312,8 @@ table td a:hover {
     height: 520px;
 }
 
-.fact-container h1 {
+.fact-container h2 {
+    font-size: 3.25em;
     margin: 15px;
 }
 

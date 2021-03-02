@@ -141,12 +141,18 @@ Some changes were made to the design of the site after completion of the wirefra
 
     ![Form - success](assets/images/readme/form-success.png)
     ![Form - error](assets/images/readme/form-error.png)
-    ![Form - error](assets/images/readme/form-error.png)
 
 - **Social Media**
     * All social media links take the user to social pages in an external link. 
 
+## Validation
 
+-   [**HTML Validator**](https://validator.w3.org/) Running my index.html through the HTML validator through back a couple of warnings and zero errors. 
+    - warning: the country selection section lacked a heading. I therefore added a h2 heading for screen readers only. 
+    - warning: use of a h1 element for the fact box. I therefore changed the h1 to an h2 element. 
+Following the changes above the HTML validator returned no errors or warnings. 
+
+- [**CSS Validator**]()
 
 HTML Validator <br>
 CSS Validator <br>

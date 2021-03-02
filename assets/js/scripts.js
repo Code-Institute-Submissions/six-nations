@@ -86,7 +86,7 @@ const hospitalityObject = {
 // Capitalise first character of string
 function uppercaseFirstCharacter(name) {
     return name.charAt(0).toUpperCase() + name.slice(1);
-};
+}
 
 function countriesMap(){
     countries.map(function(country){
@@ -158,7 +158,7 @@ function countriesMap(){
             }
         });
     });
-};
+}
 
 function hospitalityMap() {
     hospitality.map((location) => {
@@ -168,7 +168,7 @@ function hospitalityMap() {
                     title="${hospitalityObject[`${location}`].name}"><i class="${hospitalityObject[`${location}`].icon}"></i></button>`
         );
     });
-};
+}
 
 function facts() {
     const factsContent = [
@@ -196,10 +196,10 @@ function facts() {
         $("#facts").fadeOut(1000, function () {
             $("#facts").fadeIn(1000).html(factsContent[factArrayIndex]);
         });
-    };
+    }
     // Set Interval between facts 
     setInterval(cycleFacts, 9000);
-};
+}
 
 
 
