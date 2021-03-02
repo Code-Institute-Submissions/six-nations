@@ -106,6 +106,9 @@ Some changes were made to the design of the site after completion of the wirefra
 
 - **Navbar** 
     * When the user hovers over either of the items in the navbar with their cursor, the item is highlighted with a white background and the text changes to green. 
+
+    ![screenshot of  navbar- active](assets/images/readme/navbar.png)
+
     * When the 'Choose a Country' item is selected, the window jumps down the page and the Country selectors are positioned at the top of the window. 
     * When the 'Sign Up' item is selected, the window jumps to the bottom of the page where teh user can sign up to the newsletter. 
     * On smaller windows, the navbar collapses into a hamburger button which, when clicked, displays the two items in the navbar. 
@@ -115,6 +118,9 @@ Some changes were made to the design of the site after completion of the wirefra
     * When a country is selected, the country's flag becomes visible to let the user know that this selector is active. The information and map related to the selected country is displayed below the selectors while it is active.
     * When a country is clicked for a second time, the country's flag disappears and the country's name reutrns. Also, the information and map related to the country is hidden from view. 
     * When another country is selected, the previously 'active' country's flag, information and map is hidden from view and replaced by the new selected country.
+    * These country's can be easily removed and added depending on future teams in the tournament by simply editing the array and object in scripts.js.
+
+    ![screenshot of country selector active](assets/images/readme/country-selector.png)
 - **Country Information**
     * For each country, there is a set of information displayed and related links to various websites. When a country is selected, the style and look stays the same, however the content changes depending on what is selected. 
     * The location address for each country links to an external Google map. The 'travel information', 'matchday ticket' button and 'book flights' button all link to related external sites. 
@@ -122,13 +128,21 @@ Some changes were made to the design of the site after completion of the wirefra
     * The Google map for each country, when first displayed, shows the location of the stadium.
     * The three buttons located above the map remove any markers already visible on the map and in turn, replaces these markers with ones to represent the selected business type, whether hotels, restaurants or bars.
     * When any of the buttons are hovered over, a tooltip appears above with a written description for the business type and once clicked, the tooltip stays visible to show that button is active.  
+
+    ![screenshot of map in use](assets/images/readme/map.png)
+
 - **Fact Box** 
     * When the page is loaded the fact box begins its cycle. There are currently seven facts that fade in and out of view, staying visible for 9 seconds.
     * Facts can be added and removed easily by adding to, or deleting them from the related array in the scripts.js file. 
 - **Newsletter Sign Up** 
     * The user can sign up to a newsletter by imputting their email address and clicking the submit button. 
     * If submitted successfully a small tick will appear for three seconds and the form will reset itself. 
-    * Similarly, if unsuccessful a cross will appear. 
+    * Similarly, if unsuccessful an error message will appear. 
+
+    ![Form - success](assets/images/readme/form-success.png)
+    ![Form - error](assets/images/readme/form-error.png)
+    ![Form - error](assets/images/readme/form-error.png)
+
 - **Social Media**
     * All social media links take the user to social pages in an external link. 
 
@@ -145,6 +159,6 @@ https://www.ruck.co.uk/mind-blowing-facts-you-never-knew-about-the-six-nations/2
 
 
 
-bugs - s
+bugs - background for navbar
 
 # Credits
