@@ -102,6 +102,7 @@ Some changes were made to the design of the site after completion of the wirefra
 
 # Testing
 
+
 ## Functionality Testing
 
 - **Navbar** 
@@ -157,14 +158,25 @@ Following the changes above the HTML validator returned no errors or warnings.
 
 - [**Javascript Validator**](https://beautifytools.com/javascript-validator.php) I validated my scripts.js, maps.js and signup.js and it returned no errors. 
 
+## Compatability Testing
+The site was regularly checked (using Chrome DevTools) for responsiveness across various screen sizes. Once the site had been completed, it was then checked on Safari and Chrome browsers, Apple and Samsung tablets and various mobile devices including Apple and Google. 
+
+Below are some bugs that arose during the testing process:
+
+- The background for the nevbar was set to transparent to display the header image. However this meant that when the toggler was implemented on smaller screens, the navigation links clashed with the background image. I therefore added a background using Javascript for when the toggler was clicked. 
+- When testing with users, it became clear that not everybody understood what the icons represented above the map. This was the stage that the tooltips were added. 
+
+## Lighthouse
+
+I conducted tests using the Lighthouse feature on Chrome DevTools. Below are the results from the test. 
+![Performance 95%, Accessibility 97%, Best Prractices 93%, SEO 100%](assets/images/readme/lighthouse.png)
+
+## Testing User Stories
 
 # Deployment
 
 Six nations facts
 https://www.ruck.co.uk/mind-blowing-facts-you-never-knew-about-the-six-nations/2/
 
-
-
-bugs - background for navbar
 
 # Credits
