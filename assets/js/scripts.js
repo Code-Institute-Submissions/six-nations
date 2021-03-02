@@ -175,7 +175,7 @@ function facts() {
         "The inside of the trophy was recently plated with gold to protect it from the corrosive properties of champagne. They even added a lip to aid drinking from it!",
         "The 6 Nations trophy is crafted from sterling silver, and has an estimated value of £55,000.",
         "England has won the most Grand Slams with 12, Wales second with 10 and France third with 9 respectively.",
-        "Irelands Ronan O’Gara is the tournaments highest points scorer with 551 points while teammate Brian O’Driscoll is the highest try scorer with 25.",
+        "Ireland's Ronan O’Gara is the tournaments highest points scorer with 551 points while teammate Brian O’Driscoll is the highest try scorer with 25.",
         "The 1977 Grand Slam-winning France team did not concede a try in their four matches.",
         "Twickenham stadium will sell around 160,547 pints each match.",
         "The most points ever scored in one game is 80 by England against Italy in 2001."
