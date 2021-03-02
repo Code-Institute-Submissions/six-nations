@@ -209,6 +209,7 @@ $("document").ready(function () {
     hospitalityMap();
     facts();
 
+    // Bootstrap function for tooltip
     $('[data-toggle="tooltip"]').tooltip();
 
     // Add background color to dropdown menu

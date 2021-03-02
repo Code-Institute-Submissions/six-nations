@@ -254,6 +254,7 @@ table td a:hover {
     width: 90vw;
     margin-left: auto;
     margin-right: auto;
+    color: #000
 }
 
 #map-container h3 {

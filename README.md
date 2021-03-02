@@ -70,7 +70,7 @@ Some changes were made to the design of the site after completion of the wirefra
  - **Header** The heading, which is displayed in the centre of the landing window, is big and bold and describes the functionality of the site. 
  - **Country Selectors** At the bottom of the window (when the page is loaded) are six country selectors, one for each nation that hosts games during the tournament. I wanted these to be visible as soon as the page loaded. When an selector is chosen, the window will automatically scroll down (if the content isn't already in view) to display facts and information specific to the chosen nation. The selector, once chosen, also displays the nations flag to display that this button is active. When the selector is clicked for a second time, or another country is chosen, the previous selector returns to its original state and the related information is hidden. 
  - **Information section** When a country is selected, the information that is displayed below the selector is specific to that country and is relevant and helpful for any visitor travelling to an away day. The information includes the name of the city and the stadium, the capacity of the stadium and address. The address links to an external google map so the user can enter directions. Other options available are links to various helpful sites, including travel information and the purchasing of matchday tickets and flight booking. 
- - **Map section** The map section is either situated underneath the city information in smaller screens, or to the right hand side on larger screens. This includes three selectors and a Google map. When the country is first selected, the google map initially displays a marker for the location of the stadium used for by the country's national rugby team. There are three selectors above the map which, once clicked, will display local ammenities to the stadium. These include hotels, restaurants and bars. The selectors have an icon in them to represent the type of venue they will display, but I have also included a Bootstrap tooltip to back up the icon. 
+ - **Map section** The map section is either situated underneath the city information in smaller screens, or to the right hand side on larger screens. This includes three selectors and a Google map. When the country is first selected, the google map initially displays a marker for the location of the stadium used for by the country's national rugby team. There are three selectors above the map which, once clicked, will display local ammenities to the stadium; these include hotels, restaurants and bars. If the user clicks on any of the markers, the map will display an info window and show the name of the venue. The selectors have an icon in them to represent the type of venue they will display, but I have also included a Bootstrap tooltip to back up the icon. 
  - **Fact box** Below the map section there is a box which cycles through a number of facts related to the Six Nations tournament. These facts fade into view and are visible for 9 seconds before moving on to the next one. The facts will continue to cycle while the page is open and once reloaded, the facts will return back to the beginning of the cycle. 
  - **Footer** At the bottom of the page is the footer, which is broken down into two sections. The first is a sign up section for a newsletter which is related to the website. This requires an email address and the user can optionally add which country they follow for more targetted content. On submittion of the form, the information is then sent to the site owner using EmailJS and a tick is visible next to the submit button for a short period to let the user know the information has been sent successfully. Alternatively, if there is a problem sending the form, a cross will appear next to the submit button. If the form is sent successfully, then the form is reset in case the user would like to add another contact email. 
  The other section of the footer includes social media icons which relate to the official Six Nations social media pages. 
@@ -132,6 +132,10 @@ Some changes were made to the design of the site after completion of the wirefra
 
     ![screenshot of map in use](assets/images/readme/map.png)
 
+    * Each marker shows the location of the venue and, when clicked, displays an info window with the name of the venue. If, and when, the user clicks on another marker, the previous info window disappears. 
+
+     ![screenshot of map marker in use](assets/images/readme/map2.png)
+
 - **Fact Box** 
     * When the page is loaded the fact box begins its cycle. There are currently seven facts that fade in and out of view, staying visible for 9 seconds.
     * Facts can be added and removed easily by adding to, or deleting them from the related array in the scripts.js file. 
@@ -173,10 +177,76 @@ I conducted tests using the Lighthouse feature on Chrome DevTools. Below are the
 
 ## Testing User Stories
 
+* As a visitor to the website, I want to:
+
+    - *Navigate around the website with ease.*
+
+    The website is all condensed into one page which can display all of the information for each country in turn. The navbar and country selectors automatically scroll the page to the desired position for the user and what they have requested to see by clicking an option. 
+
+    - *Find and select the country/city I am planning to visit.*
+
+    The country selectors are clearly visible at the bottom of the page on loading and on selecting one, displays the relevant information. 
+
+    - *Locate country specific information which will include name and location of the stadium and links to travel information.*
+
+    On selecting the country the relevant information becomes visible including the specific name and other local information. 
+
+    - *Easy access to match day ticket bookings and flight searches.*
+
+    Two buttons are located at the bottom of each information section which stand out against the other information. These offer external links to relevant pages with regards to flight booking and match day tickets. 
+
+    - *View a map of the local area to the relevant stadium.* 
+
+    On loading a certain country's information, a map also becomes visible offering the location of the stadium and it's local area. 
+
+    - *Be able to view and find local ammenitites, including accomodation and establishments to eat and drink near the stadium*. 
+
+    Above the map there are three buttons each referencing a different type of venue a supporter may want to visit on a match day, including bars, restaurants and local hotels. The color of the icons relates to the markers on the map. 
+
+    - *Be able to sign up for relevant news and information to do with the Six Nations tournament.* 
+
+    In the footer of the page, and easily accessible from the navbar, there is a sign up form for the a Six Nations newsletter. The option is also available to select a certain team for targetted news and reports. 
+
+    - *Access links to the official Six Nations social media pages.*
+
+    In the footer section, there are three large social media icons which, when selected, take the user to the official six nations social media pages in an external page.
+
+    - *View all information clearly and access it easily when I return to the website.*
+
+    The information is all neatly spaced out across the page with lots of blank space so as not to seem overcrowded. It is quick and easy to access the information, which is the main function of the site. All links open in external pages so the user can keep the page open. 
+
+
 # Deployment
 
-Six nations facts
-https://www.ruck.co.uk/mind-blowing-facts-you-never-knew-about-the-six-nations/2/
+The site was deployed using GitHub Pages using the following steps.
 
+1. Log into GitHub.
+2. Go to the site's [repository](https://github.com/OliHickie/six-nations).
+3. In the submenu, click the settings tab and scroll down to the heading 'GitHub Pages'.
+4. Change the source to the required branch and, when the page reloads, copy the link into your browser.
+
+
+To clone the site follow the following steps.
+
+1. Log into GitHub.
+2. Go to the site's [repository](https://github.com/OliHickie/six-nations).
+3. Next to the green 'Gitpod' button, click the drop down menu that says 'code'.
+4. Copy the url provided.
+5. Open the terminal in an environment you would like to use to clone the site and enter 'git clone' followed by the copied url. When you press enter, the code will be cloned.
 
 # Credits
+
+## Content, Media and Code
+
+* The facts used about the Six Nations were taken from [here](https://www.ruck.co.uk/mind-blowing-facts-you-never-knew-about-the-six-nations/).
+* The two background images were taken from [Shutterstock](https://www.shutterstock.com/home).
+    - Image 1 - [The jumping ruigby players](https://www.shutterstock.com/image-photo/0402-stadio-olimpico-rome-italy-rbs-1019239000).
+    - Image 2 - [Aviva Stadium](https://www.shutterstock.com/image-photo/dublin-june-10-empty-stadium-aviva-63908860).
+* The flag images were taken from [GoSquared](https://www.gosquared.com/resources/flag-icons/).
+
+
+* Much of the code used for the Google Map API was taken from the [Google Map documentation](https://developers.google.com/maps/documentation/javascript/overview)
+
+
+
+I would like to give a huge thank you to my mentor Maranatha Ilesanmi for his patience, help and support with this project. I would also like to extend my gratitude to the Code Institute tutor team and Slack community for their words of wisdom. 
