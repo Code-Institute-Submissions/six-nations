@@ -152,11 +152,11 @@ Some changes were made to the design of the site after completion of the wirefra
     - warning: use of a h1 element for the fact box. I therefore changed the h1 to an h2 element. 
 Following the changes above the HTML validator returned no errors or warnings. 
 
-- [**CSS Validator**]()
+- [**CSS Validator**](https://jigsaw.w3.org/css-validator/) I validated my css at the linked site and it returned no errors. <br>
+![CSS Validation](http://jigsaw.w3.org/css-validator/images/vcss)
 
-HTML Validator <br>
-CSS Validator <br>
-[Javascript Validator](https://beautifytools.com/javascript-validator.php) 
+- [**Javascript Validator**](https://beautifytools.com/javascript-validator.php) I validated my scripts.js, maps.js and signup.js and it returned no errors. 
+
 
 # Deployment
 
