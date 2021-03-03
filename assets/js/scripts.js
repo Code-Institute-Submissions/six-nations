@@ -1,6 +1,6 @@
-const countries = ["england", "wales", "scotland", "ireland", "france", "italy"];
-const cityInfo = {
-    england: {
+const cities = [
+    {
+        country: "england",
         city: "London",
         stadium: "Twickenham Stadium",
         capacity: "82,000",
@@ -11,7 +11,8 @@ const cityInfo = {
         travelLink: "https://www.twickenhamstadium.com/getting-here",
         ticketLink: "https://www.eticketing.co.uk/rfu/Events/Index"
     },
-    wales: {
+    {
+        country: "wales",
         city: "Cardiff",
         stadium: "Principality Stadium",
         capacity: "74,500",
@@ -22,7 +23,8 @@ const cityInfo = {
         travelLink: "https://www.principalitystadium.wales/information/about-the-venue/",
         ticketLink: "https://www.eticketing.co.uk/principalitystadium/"
     },
-    scotland: {
+    {
+        country: "scotland",
         city: "Edinburgh",
         stadium: "Murrayfield Stadium",
         capacity: "67,144",
@@ -33,7 +35,8 @@ const cityInfo = {
         travelLink: "https://www.scottishrugby.org/tickets-and-events/getting-to-bt-murrayfield",
         ticketLink: "https://www.scottishrugby.org/tickets-and-events/"
     },
-    ireland: {
+    {
+        country: "ireland",
         city: "Dublin",
         stadium: "Aviva Stadium",
         capacity: "51,700",
@@ -44,7 +47,8 @@ const cityInfo = {
         travelLink: "https://www.avivastadium.ie/getting-here",
         ticketLink: "https://www.irishrugby.ie/ireland/tickets/"
     },
-    france: {
+    {
+        country: "france",
         city: "Paris",
         stadium: "Stade de France",
         capacity: "81,338",
@@ -55,7 +59,8 @@ const cityInfo = {
         travelLink: "https://www.stadefrance.com/en/practical-information/how-to-get-there",
         ticketLink: "https://www.stadefrance.com/en/tickets"
     },
-    italy: {
+    {
+        country: "italy",
         city: "Rome",
         stadium: "Stadio Olimpico",
         capacity: "72,698",
@@ -66,70 +71,54 @@ const cityInfo = {
         travelLink: "https://www.eventtravel.com/olympic-stadium-rome",
         ticketLink: "https://ticket.federugby.it/"
     }
-};
-const hospitality = ["hotels", "restaurants", "bars"];
-const hospitalityObject = {
-    hotels: {
-        name: "Hotels",
-        icon: "fas fa-bed"
-    },
-    restaurants: {
-        name: "Restaurants",
-        icon: "fas fa-utensils"
-    },
-    bars: {
-        name: "Bars",
-        icon: "fas fa-beer"
-    }
-};
+]
 
 // Capitalise first character of string
 function uppercaseFirstCharacter(name) {
     return name.charAt(0).toUpperCase() + name.slice(1);
 }
 
-function countriesMap(){
-    countries.map(function(country){
+function countriesMap() {
+    cities.map(function (cityInfo) {
         //Build buttons
         $("#countries").append(
             `<div class="col-4 col-sm-2 country-btn-container">
-                <button class="country-btn btn-hover" id="${country}"><img src="assets/images/flags/${country}-flag.png"
-                        alt="${country} Flag" class="flag d-none" id="${country}-flag">${uppercaseFirstCharacter(country)}</button>
+                <button class="country-btn btn-hover" id="${cityInfo.country}"><img src="assets/images/flags/${cityInfo.country}-flag.png"
+                        alt="${cityInfo.country} Flag" class="flag d-none" id="${cityInfo.country}-flag">${uppercaseFirstCharacter(cityInfo.country)}</button>
             </div>`);
 
         //Country Information
         $("#country-info-container").append(
-            `<div class="information d-none" id="${country}-info">
+            `<div class="information d-none" id="${cityInfo.country}-info">
              <div class="information-table">
-                <h2>${uppercaseFirstCharacter(country)}</h2>
                 <table>
                     <tr>
                         <th>City:</th>
-                        <th class="pl-3">${cityInfo[`${country}`].city}</th>
+                        <th class="pl-3">${cityInfo.city}</th>
                     </tr>
                     <tr>
                         <td>Stadium:</td>
-                        <td class="pl-3">${cityInfo[`${country}`].stadium}</td>
+                        <td class="pl-3">${cityInfo.stadium}</td>
                     </tr>
                     <tr>
                         <td>Capacity:</td>
-                        <td class="pl-3">${cityInfo[`${country}`].capacity}</td>
+                        <td class="pl-3">${cityInfo.capacity}</td>
                     </tr>
                     <tr>
                         <td>Location:</td>
-                        <td class="pl-3"><a href="${cityInfo[`${country}`].locationLink}"
-                                target="_blank">${cityInfo[`${country}`].addressLineOne}<br>${cityInfo[`${country}`].addressLineTwo}<br>${cityInfo[`${country}`].addressLineThree}</a></td>
+                        <td class="pl-3"><a href="${cityInfo.locationLink}"
+                                target="_blank">${cityInfo.addressLineOne}<br>${cityInfo.addressLineTwo}<br>${cityInfo.addressLineThree}</a></td>
                     </tr>
                 </table>
               
                 <br>
-                <a href="${cityInfo[`${country}`].travelLink}" target="_blank" class="travel-link">Click
+                <a href="${cityInfo.travelLink}" target="_blank" class="travel-link">Click
                     here for travel information</a>
                       </div>
                 <div class="row">
                     <div class="col">
                         <button class="small-btn">
-                            <a href="${cityInfo[`${country}`].ticketLink}" target="_blank"
+                            <a href="${cityInfo.ticketLink}" target="_blank"
                                 class="btn-hover">Matchday Tickets</a>
                         </button>
                         <button class="small-btn">
@@ -141,7 +130,7 @@ function countriesMap(){
         );
 
         // Country Selector click function
-        $(`#${country}`).click(function () {
+        $(`#${cityInfo.country}`).click(function () {
 
             if (($(this).children("img")).hasClass("active")) {
                 // removes flag and info when clicked off
@@ -152,8 +141,9 @@ function countriesMap(){
                 // replaces other country's info with selected country
                 $(".country-btn").children("img").addClass("d-none").removeClass("active");
                 $(".information").addClass("d-none");
-                $(`#${country}-flag`).removeClass("d-none").addClass("active");
-                $(`#${country}-info`).removeClass("d-none");
+                $("#country-info-title").text(uppercaseFirstCharacter(cityInfo.country))
+                $(`#${cityInfo.country}-flag`).removeClass("d-none").addClass("active");
+                $(`#${cityInfo.country}-info`).removeClass("d-none");
                 $("#map-container").removeClass("d-none");
             }
         });
@@ -161,11 +151,25 @@ function countriesMap(){
 }
 
 function hospitalityMap() {
+    const hospitality = [
+        {
+            name: "Hotels",
+            icon: "fas fa-bed"
+        },
+        {
+            name: "Restaurants",
+            icon: "fas fa-utensils"
+        },
+        {
+            name: "Bars",
+            icon: "fas fa-beer"
+        }
+    ]
     hospitality.map((location) => {
         // build map selectors
         $(".hospitality-selectors").append(
             `<button class="selector text-center" id="${location}" data-toggle="tooltip" data-placement="top"
-                    title="${hospitalityObject[`${location}`].name}"><i class="${hospitalityObject[`${location}`].icon}"></i></button>`
+                    title="${location.name}"><i class="${location.icon}"></i></button>`
         );
     });
 }
@@ -223,7 +227,7 @@ $("document").ready(function () {
             $('html,body').animate({
                 scrollTop: $(".country-btn").offset().top - 50
             },
-            500);
+                500);
         }
     });
 });
