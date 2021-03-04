@@ -90,6 +90,7 @@ function countriesMap() {
         //Country Information
         $("#country-info-container").append(
             `<div class="information d-none" id="${cityInfo.country}-info">
+            <h2>${uppercaseFirstCharacter(cityInfo.country)}</h2>
              <div class="information-table">
                 <table>
                     <tr>
@@ -109,9 +110,7 @@ function countriesMap() {
                         <td class="pl-3"><a href="${cityInfo.locationLink}"
                                 target="_blank">${cityInfo.addressLineOne}<br>${cityInfo.addressLineTwo}<br>${cityInfo.addressLineThree}</a></td>
                     </tr>
-                </table>
-              
-                <br>
+                </table><br>
                 <a href="${cityInfo.travelLink}" target="_blank" class="travel-link">Click
                     here for travel information</a>
                       </div>
@@ -133,15 +132,15 @@ function countriesMap() {
         $(`#${cityInfo.country}`).click(function () {
 
             if (($(this).children("img")).hasClass("active")) {
-                // removes flag and info when clicked off
+                // removes flag and info when clicked for second time
                 $(".country-btn").children("img").addClass("d-none").removeClass("active");
                 $(".information").addClass("d-none");
                 $("#map-container").addClass("d-none");
             } else {
-                // replaces other country's info with selected country
+                // removes flag and info when another country clicked
                 $(".country-btn").children("img").addClass("d-none").removeClass("active");
                 $(".information").addClass("d-none");
-                $("#country-info-title").text(uppercaseFirstCharacter(cityInfo.country))
+                // adds flag and info of new country
                 $(`#${cityInfo.country}-flag`).removeClass("d-none").addClass("active");
                 $(`#${cityInfo.country}-info`).removeClass("d-none");
                 $("#map-container").removeClass("d-none");
@@ -221,7 +220,7 @@ $("document").ready(function () {
         $(".navbar").toggleClass("toggler-bg");
     });
 
-    // if facts are out of view when country selected, the window will scroll down 
+    // if facts are out of view when country selected, scroll window down 
     $(".country-btn").click(function () {
         if (window.scrollY < 250) {
             $('html,body').animate({
