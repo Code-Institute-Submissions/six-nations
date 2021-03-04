@@ -90,8 +90,8 @@ function countriesMap() {
         //Country Information
         $("#country-info-container").append(
             `<div class="information d-none" id="${cityInfo.country}-info">
-            <h2>${uppercaseFirstCharacter(cityInfo.country)}</h2>
              <div class="information-table">
+             <h2>${uppercaseFirstCharacter(cityInfo.country)}</h2>
                 <table>
                     <tr>
                         <th>City:</th>
