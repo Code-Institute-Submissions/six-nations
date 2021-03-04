@@ -150,25 +150,25 @@ function countriesMap() {
 }
 
 function hospitalityMap() {
-    const hospitality = [
+    const hospitalityType = [
         {
-            name: "Hotels",
+            name: "hotels",
             icon: "fas fa-bed"
         },
         {
-            name: "Restaurants",
+            name: "restaurants",
             icon: "fas fa-utensils"
         },
         {
-            name: "Bars",
+            name: "bars",
             icon: "fas fa-beer"
         }
     ]
-    hospitality.map((location) => {
+    hospitalityType.map((location) => {
         // build map selectors
         $(".hospitality-selectors").append(
-            `<button class="selector text-center" id="${location}" data-toggle="tooltip" data-placement="top"
-                    title="${location.name}"><i class="${location.icon}"></i></button>`
+            `<button class="selector text-center" id="${location.name}" data-toggle="tooltip" data-placement="top"
+                    title="${uppercaseFirstCharacter(location.name)}"><i class="${location.icon}"></i></button>`
         );
     });
 }
