@@ -229,4 +229,10 @@ $("document").ready(function () {
                 500);
         }
     });
+
+    // change bg and font color of social icon
+    $(".social-icon").hover(function(){
+        $(this, ".fab").toggleClass("socials-hover-color");
+        $(this, ".social-icon").toggleClass("socials-hover-bg");
+    })
 });

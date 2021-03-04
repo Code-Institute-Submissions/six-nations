@@ -399,18 +399,22 @@ footer {
 
 .social-icon {
     width: 60px;
-    background-color: #f9f9f9;
     border-radius: 50px;
+    color: #f9f9f9;
+
 }
 
 .socials a {
     font-size: 2.5em;
+    color: inherit;
+}
+
+.socials-hover-color {
     color: #00302b;
 }
 
-
-.socials a:hover {
-    color: rgba(0, 48, 43, 0.5);
+.socials-hover-bg {
+    background-color: #f9f9f9;
 }
 
 
