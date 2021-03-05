@@ -71,7 +71,7 @@ const cities = [
         travelLink: "https://www.eventtravel.com/olympic-stadium-rome",
         ticketLink: "https://ticket.federugby.it/"
     }
-]
+];
 
 // Capitalise first character of string
 function uppercaseFirstCharacter(name) {
@@ -163,8 +163,8 @@ function hospitalityMap() {
             name: "bars",
             icon: "fas fa-beer"
         }
-    ]
-    hospitalityType.map((location) => {
+    ];
+    hospitalityType.map(function(location) {
         // build map selectors
         $(".hospitality-selectors").append(
             `<button class="selector text-center" id="${location.name}" data-toggle="tooltip" data-placement="top"
@@ -234,5 +234,5 @@ $("document").ready(function () {
     $(".social-icon").hover(function(){
         $(this, ".fab").toggleClass("socials-hover-color");
         $(this, ".social-icon").toggleClass("socials-hover-bg");
-    })
+    });
 });
